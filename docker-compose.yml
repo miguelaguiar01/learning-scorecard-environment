@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  moodle_db:
+    image: mariadb:10.6
+    container_name: moodle_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${DB_NAME:-moodle}
+      MYSQL_USER: ${DB_USER:-moodle}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-moodle}
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    command: >
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --innodb-file-format=Barracuda
+      --innodb-file-per-table=1
+      --innodb-large-prefix=1
+    restart: unless-stopped
+
+  moodle_web:
+    image: php:8.1-apache
+    container_name: moodle_web
+    ports:
+      - "${MOODLE_PORT:-8080}:80"
+    volumes:
+      - moodle_data:/var/www/moodledata
+      - ./plugins/learning-scorecard-moodle:/var/www/html/local/learning_scorecard
+      - ./moodle-config:/var/www/html/config
+    depends_on:
+      - moodle_db
+    restart: unless-stopped
+
+volumes:
+  db_data:
+  moodle_data:
+
+networks:
+  default:
+    name: moodle_network

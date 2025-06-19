@@ -1,0 +1,45 @@
+
+# Backup files (optional - you might want to keep small backups in git)
+backups/*.sql
+backups/*.sql.gz
+backups/*.tar.gz
+backups/database/*
+backups/moodle-data/*
+
+# Logs
+*.log
+
+# Environment files - NEVER commit these!
+.env
+.env.local
+.env.*.local
+
+# Moodle config - contains database passwords
+moodle-config/
+config.php
+
+# Docker volumes
+docker-volumes/
+volumes/
+
+# Temporary files
+*.log
+*.tmp
+/tmp/
+temp/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker override files (may contain sensitive data)
+docker-compose.override.yml
+docker-compose.*.yml
+!docker-compose.example.yml
