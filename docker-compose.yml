@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   moodle_db:
     image: mariadb:10.6
@@ -22,14 +20,13 @@ services:
     restart: unless-stopped
 
   moodle_web:
-    image: php:8.1-apache
+    image: ghcr.io/miguelaguiar01/learning-scorecard-environment:latest
     container_name: moodle_web
     ports:
       - "${MOODLE_PORT:-8080}:80"
     volumes:
       - moodle_data:/var/www/moodledata
       - ./plugins/learning-scorecard-moodle:/var/www/html/local/learning_scorecard
-      - ./moodle-config:/var/www/html/config
     depends_on:
       - moodle_db
     restart: unless-stopped
