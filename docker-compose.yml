@@ -27,6 +27,7 @@ services:
     volumes:
       - moodle_data:/var/www/moodledata
       - ./plugins/learning-scorecard-moodle:/var/www/html/local/learning_scorecard
+      - ./plugins/learning-scorecard-block:/var/www/html/blocks/learning_scorecard
     depends_on:
       - moodle_db
     restart: unless-stopped
