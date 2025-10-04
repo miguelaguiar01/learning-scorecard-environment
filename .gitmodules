@@ -1,3 +1,6 @@
 [submodule "plugins/learning-scorecard-moodle"]
 	path = plugins/learning-scorecard-moodle
 	url = https://github.com/miguelaguiar01/learning-scorecard-moodle.git
+[submodule "plugins/learning-scorecard-moodle-block"]
+	path = plugins/learning-scorecard-moodle-block
+	url = https://github.com/miguelaguiar01/learning-scorecard-moodle-block.git
