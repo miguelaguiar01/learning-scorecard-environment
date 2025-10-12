@@ -1,5 +1,6 @@
 \documentclass[12pt,reqno, twoside]{amsbook}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
 \usepackage{eurosym}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -292,8 +293,8 @@ LMS~\cite{altinpulluk_systematic_2021}. The platform's extensive reach is
 evidenced by its current deployment across 238 countries, serving approximately
 468 million users worldwide~\cite{moodle_stats_2025}.
 
-From a technical perspective, Moodle is built on a layered architecture~(Figure
-\ref{fig:moodle_arch}) that ensures flexibility and scalability. The
+From a technical perspective, Moodle is built on a layered architecture
+(Figure~\ref{fig:moodle_arch}) that ensures flexibility and scalability. The
 presentation layer handles the user interface and allows users to interact both
 on desktop and mobile devices. The application layer accommodates core
 functionalities and acts as an intermediary between the presentation and data
@@ -336,7 +337,9 @@ with assessment tools.
 \section{Evolution Through Iterative Development}
 \subsection{Historical Overview of Versions}
 \noindent The Learning Scorecard development began in the 2015/16 academic year as a collaborative project project undertaken by a group of Computer Science masters students enrolled in the Information Systems of Decision Support II curricular unit. This class established a foundation of rigorous analysis and systematic development that has characterized the platform's evolution throughout subsequent iterations.
-
+\begin{comment}
+Rewrite above paragraph
+\end{comment}
 The development timeline reflects the progression of features and refinements
 with each major version addressing specific limitations and opportunities
 identified through previous implementations. This iterative approach has
@@ -344,18 +347,312 @@ enabled the platform to evolve in response to changing technological
 landscapes, pedagogical insights and institutional requirements while
 maintaining consistency in core design principles.
 
-\textbf{Learning Scorecard Version 1 (2016)}
+\textbf{Learning Scorecard Version 0}
 
-\textbf{Learning Scorecard Version 2 (2017)}
+\noindent The inaugural version of the Learning Scorecard was developed by Daniela Costa as part of her master's dissertation at ISCTE-IUL~\cite{costa_thesis_2017}, whose primary objective was to create a web-based platform that would integrate Business Intelligence techniques with gamification elements in order to foster improved student learning experiences in higher education contexts.
 
-\textbf{Learning Scorecard Version 3 (2018)}
+This version adopted conventional three-tier web application architecture,
+comprising distinct presentation, application and data layers. This
+architectural pattern, while traditional, provided a stable foundation for the
+initial implementation and facilitated separation of concerns accross system
+components.
+
+The presentation layer was constructed using fundamental web technologies
+including HTML5, CSS3 and JavaScript.//TODO CITATION The Bootstrap framework
+was incorporated to ensure responsive design principles and provide pre-built
+user interface components. Chart.js, a JavaScript visualization library, was
+integrated to facilitate the creation of interactive dashboard and data
+visualizations, essential for performance monitoring. The application layer was
+built upon Node.js, with Express.js as the web application framework, providing
+routing capabilities and middleware integration. MySQL was selected as the
+relational database management system (RDBMS)//TODO CITATION, choosen for its
+compatibility with Node.js's asynchronous architecture and its widespread
+adoption in academic environments. The database schema was designed to
+accommodate user profiles, course information, assessment data and gamification
+elements.
+
+This platform was deployed in the SIAD I (Data Warehouse and Business
+Intelligence) course during the 2016/2017 academic year. Comparative analysis
+with the previous academic year (2015/2016, without LS implementation) revealed
+statistically significant improvements accross multiple performance indicators.
+The approval rate of students increased from 86\% to 92\%, the mean grade
+improved from 13.25 to 13.74 (on a 0-20 scale), the number of failed students
+decreased from 17 to 10 students and the number of students that withdrew from
+the course also decreased from 21 to 12 students.
+
+Post-implementation analysis revealed several technical and functional
+limitations, such as the absence of proactive notification mechanisms for
+approaching quest deadlines, limited diversity in quiz question formats and
+assessment types, code modularity deficiencies impeding extensibility,
+scalability constraints when supporting large concurrent user populations and
+suboptimal code organization affecting maintainability.
+
+\textbf{Learning Scorecard Version 1}
+
+\noindent Version 1 represented an evolutionary refinement of the Learning Scorecard developed collaboratively by Francisco Rações and Tiago Pedroso during the 2017/2018 academic year. Rather than representing a single unified dissertation, their work constituted two complementary master's research projects that addressed distinct but interconnected dimensions of the Learning Scorecard: systematic gamification enhancement through theoretical frameworks (Pedroso) and advanced information visualization and dashboard design (Rações).
+
+The primary motivation driving version 1 development stemmed from identified
+limitations in version 0 and broader challenges in educational gamification and
+learning analytics.
+
+Educational gamification implementations frequently suffer from superficial
+application of game elements, often limited to points, badges and leaderboards
+(PBL), without systematic consideration of how these mechanics connect to
+student motivation and desired learning outcome. Pedroso's focus was to analyze
+how gamification can be systematically designed to enhance student's engagement
+and motivation. Rações however, focused on how student learning progress in
+higher education courses is typically not monitored in real-time. His
+contribution was mainly on students perception of their learning progress
+through well-designed dashboards and visualization techniques.
+
+This version maintained and incrementally enhanced the core technological
+foundation estabilished in version 0 with the key technical enhancements being:
+(1) expanded data collection mechanisms for additional learning indicators; (2)
+enhanced dashboard rendering capabilities, supporting more complex
+visualizations; (3) improved gamification element tracking and state
+persistence; (4) refined user interface components with a more responsive
+design and (5) optimized database queries for performance improvements.
+
+The central theoretical innovation of version 1 was Pedroso's systematic
+application of the MDA (Mechanics, Dynamics, Aesthetics) framework proposed by
+Hunicke, Leblanc and Zubek~\cite{hunicke_mda_2004}. The MDA framework
+represents a formal approach to game design and game research, providing an
+analysis methodology for understanding how game elements interact and how they
+can be applied outside traditional gaming contexts.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/mda-perspectives.png}
+  \caption{MDA Perspectives. Source: Hunicke R. et al.~\cite{hunicke_mda_2004}.}
+  \label{fig:mda-perspectives}
+\end{figure}
+
+Following the MDA framework, Pedroso designed and implemented gamification
+mechanics intended to generate specific dynamics and aesthetic outcomes.
+\begin{comment}
+\\TODO SPACING
+\end{comment}
+
+\textbf{Implemented Mechanics}
+\begin{enumerate}
+  \item[1.] Experience Points (XP) System
+        \begin{itemize}
+          \item Awarded for completion of learning activities (quizzes, assignments, etc.).
+          \item Cumullative XP tracking throughout the semester.
+          \item Transparent XP calculation rules communicated to students.
+        \end{itemize}
+  \item[2.] Badge System
+        \begin{itemize}
+          \item Achievement recognition for specific accomplishments.
+          \item Categories: content mastery, participation, consistency and excellence.
+          \item Visual representation with iconography.
+          \item Badge collection displayed in student profiles.
+        \end{itemize}
+  \item[3.] Leaderboard
+        \begin{itemize}
+          \item Ranked display of student performance based on XP.
+          \item Multiple leaderboard views (class-wide, groups, etc.).
+          \item Regular updates maintaining current standings.
+        \end{itemize}
+  \item[4.] Quest System
+        \begin{itemize}
+          \item Structured learning activities with clear objectives and deadlines.
+          \item Multiple quest types: practical assignments, exercises, quizzes and forum
+                discussions.
+          \item Progress tracking with completion status visualization.
+          \item XP rewards tied to quest completion and quality.
+        \end{itemize}
+  \item[5.] Level System
+        \begin{itemize}
+          \item Hierarchical progression indicators based on cumulative XP.
+          \item Level thresholds established to create meaningful advancement milestones.
+          \item Level-up notifications providing motivational reinforcement.
+          \item Visual representation of current level and progress toward next level.
+        \end{itemize}
+  \item[6.] Progress Visualization
+        \begin{itemize}
+          \item Dashboards showing advancement through course content.
+          \item Timeline representations of quest deadlines and completion.
+          \item Comparative visualizations (individual vs. class average).
+        \end{itemize}
+\end{enumerate}
+
+\textbf{Targeted Dynamics}
+\begin{itemize}
+  \item Competition: Leaderboards and public XP totals create competitive motivation
+        between students.
+  \item Progression: Level advancement provides clear sense of forward movement.
+  \item Goal-Orientation: Quest structures with defined objectives focus student
+        effort.
+  \item Social Comparison: Peer performance visibility enables self-assessment in
+        context.
+  \item Achievement Recognition: Badges provide symbolic acknowledgement of
+        accomplishments.
+  \item Time Management: Quest deadlines encourage consistent engagement rather than
+        cramming.
+\end{itemize}
+
+\textbf{Intended Aesthetics}
+\begin{itemize}
+  \item Challenge: Encouraging mastery through structured, progressively difficult
+        learning objectives.
+  \item Discovery: Facilitating exploration of course content and connections between
+        concepts.
+  \item Progression: Providing clear sense of advancement and competence development.
+  \item Fellowship: Creating awareness of collective class journey and peer community.
+  \item Narrative: Structuring semester as coherent learning journey milestones.
+\end{itemize}
+
+Rações's contributed mainly by developing comprehensive dashboard interfaces
+for both students and faculty and by indentifying and implementing core
+learning indicators categorized in three dimensions: engagement indicators,
+coginitive indicators and social indicators.
+
+Engagement indicators measured the interactions with the learning contents,
+frequency of access to the platform and submission timeliness. Whereas
+cognitive indicators tracked grade and performance trends, quiz attempts before
+achieving success, performance consistency and improvement trajectories. The
+social indicators provided a measure on forum posting frequency and
+consistency, peer interaction patterns and collaborative activity participation
+and contribution quality.
+
+In regards to the dashboards, he made improvements on the students view
+providing actionable insights while focusing on information clarity through
+visualization components such as:
+\begin{itemize}
+  \item Line charts tracking temporal patterns of engagement (platform access and forum
+        activity over weeks).
+  \item Bar charts for comparing quiz grades across multiple assessments.
+  \item Radar charts for multi dimensional performance profiling.
+  \item Progress indicators as a visual representation of quest completion and level
+        advancement.
+  \item Tables with detailed statistical breakdowns of quiz performance and attempt
+        histories.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/student-dashboard-v1.png}
+  \caption{Student Dashboard (Version 1). Source: Rações F.~\cite{racoes_thesis_2018}.}
+  \label{fig:student-dashboard}
+\end{figure}
+
+On the faculty view, he designed the dashboards according to Business
+Intelligence best practices for analytical decision support with the following
+key metrics being displayed:
+\begin{itemize}
+  \item Number of active vs.\ inactive students.
+  \item Average quiz grades with trend indicators.
+  \item Forum participation rates across the entire class.
+  \item Assignment submission delay distributions.
+  \item At-risk student identification based on multiple indicator thresholds.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/teacher-dashboard-v1.png}
+  \caption{Teacher Dashboard (Version 1). Source: Rações F.~\cite{racoes_thesis_2018}.}
+  \label{fig:teacher-dashboard}
+\end{figure}
+
+Version 1 was deployed during the 2017/2018 academic year at ISCTE-IUL in two
+courses: SIAD I (first semester) and SIAD II (second semester). This
+represented the platforms third and fourth consecutive semester deployments,
+building upon the foundation established the previous academic year.
+
+Despite significant advances, this version retained limitations, motivating
+future development and iteration:
+\begin{itemize}
+  \item Technical Limitations
+        \begin{itemize}
+          \item Code Modularity: While improved over version 1, codebase still exhibited
+                architectural constraints limiting extensibility
+          \item Scalability Concerns: Performance characteristics with large user populations
+                remained uncertain
+          \item Data processing: Some analytics required manual calculation or batch processing
+                rather than real-time computation
+        \end{itemize}
+  \item Functional Limitations
+        \begin{itemize}
+          \item Difficuty Assessment: Lacking mechanisms to capture student-perceived
+                difficulty of content topics
+          \item Adaptive Learning: Limited capability to personalize learning paths based on
+                individual student characteristics
+          \item Predictive Analytics: No predictive modeling of future student and class
+                performance
+        \end{itemize}
+  \item Pedagogical Considerations
+        \begin{itemize}
+          \item Self-Reported Data: Reliance on faculty to input the information regarding
+                students grades, performance, etc.
+          \item Generalizability: Implementation validated in SIAD courses, applicability to
+                other courses uncertain
+        \end{itemize}
+\end{itemize}
+
+While version 1 achieved significant pedagogical and user experience
+improvements, these identified technical and functional limitations motivated
+Miguel Lopes'~\cite{lopes_ontologies_2021} subsequent comprehensive
+architectural reimagination (version 2), which would address scalability
+concerns and integrate semantic web technologies while preserving the
+gamification and visualization innovations contributed by Pedroso and Rações.
+
+\textbf{Learning Scorecard Version 2}
+
+The latest version of Learning Scorecard, version 2, developed by Miguel
+Lopes~\cite{lopes_ontologies_2021} during the 2020/2021 academic year at
+ISCTE-IUL. This version constituted a complete platform redevelopment rather
+than incremental enhancement, motivated by critical limitations that had
+accumulated across three previous iterations.
+
+Lopes'~\cite{lopes_ontologies_2021} key contributions to this version were the
+implementation of a semantic web through the application of ontologies and
+integration of a GraphQL~\cite{graphdb_ontotext} semantic database, the
+application of a structured mechanism for continuous student feedback on
+learning difficulties and a shift from the monolithical three tier architecture
+into a cloud-native, microservices design that enabled scalability and
+multi-institutional deployment.
+
+In this version, the sylabus contents could be stored in the GraphDB database
+and displayed to the students as a better way to visualize the course's
+contents as shown in figure~\ref{fig:sylabus-uc}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/sylabus-uc-v2.png}
+  \caption{Sylabus Contents of an UC. Source: Lopes M.~\cite{lopes_ontologies_2021}.}
+  \label{fig:sylabus-uc}
+\end{figure}
+
+The learning difficulties of students could be gathered through a questionnaire
+after every quest (see figure~\ref{fig:quest-validation}), presented to
+students as a quest validation that would give the quests XP upon completion.
+This would provide the faculty a better view of the students challenges and
+feedback on the lessons, as well as what needed to be revised as demonstrated
+in the figure~\ref{fig:sylabus-uc-with-validation}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/difficulty-tab-v2.png}
+  \caption{Difficulty questionnaire (quest validation). Source: Lopes M.~\cite{lopes_ontologies_2021}.}
+  \label{fig:quest-validation}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/sylabus-uc-with-difficulty-v2.png}
+  \caption{Syllabus contents with difficulty perceived by students. Source: Lopes M.~\cite{lopes_ontologies_2021}.}
+  \label{fig:sylabus-uc-with-validation}
+\end{figure}
+
+Further technical investigation will come when analyzing the current state of
+the application in chapter 4 of this dissertation.
 
 \subsection{Lessons Learned from Prior Iterations}
 
 The evolutionary development of the Learning Scorecard has yielded important
 insights into the challenges and opportunities associated with educational
 technology implementation in higher education contexts. These lessons have
-directly informed the design decisions underlying Learning Scorecard 3.0 and
+directly informed the design decisions underlying Learning Scorecard 3 and
 provide valuable guidance for future LS development efforts.
 
 Previous iterations consistently revealed the critical importance of seamless
@@ -375,7 +672,12 @@ investment. Faculty adoption correlated strongly with the availability of
 actionable insights that directly supported pedagogical decision-making without
 creating additional workload or administrative burden.
 
-\textit{Scalability and Maintenance Considerations} The operational experience of maintaining standalone Learning Scorecard implementations revealed significant challenges related to infrastructure costs, security management and version compatibility. These experiences demonstrated the advantages of leveraging existing institutional infrastructure and support systems rather than maintaining separate technological stacks that require independent updates, security monitoring and user support.
+The operational experience of maintaining standalone Learning Scorecard
+implementations revealed significant challenges related to infrastructure
+costs, security management and version compatibility. These experiences
+demonstrated the advantages of leveraging existing institutional infrastructure
+and support systems rather than maintaining separate technological stacks that
+require independent updates, security monitoring and user support.
 \section{Learning Scorecard Conceptual Framework}
 
 The Learning Scorecard (LS) conceptual framework encompasses a comprehensive
@@ -434,39 +736,6 @@ accomplishments and maintaining motivation through visible achievements.
 \textbf{Avatars.} The \textit{Avatar} system enables profile customization while serving as a visual indicator of progression. Students unlock new avatar options as they advance through rank levels, with both male and female options available at each tier, allowing for personal expression while maintaining the connection between visual representation and academic achievement.
 
 \textbf{Leaderboards.} Multiple \textit{Leaderboard} systems enable various forms of competition and comparison through five distinct categories: overall individual rankings, guild-based comparisons, exercise-specific performance, quiz results and combined metrics. Each leaderboard displays position, username, rank, avatar and XP totals, creating transparency in academic performance while fostering healthy competition among participants.
-
-\begin{comment}
-\subsection{Monitoring and Analytics}
-
-\subsubsection{Student Dashboard}
-\paragraph\ The student dashboard serves as the central interface for progress monitoring and decision-making.
-Students can view their advancement across different quest types, track XP accumulation, monitor rank progression and analyze their performance relative to peers.
-The dashboard integrates all gamification elements into a cohesive user experience.
-
-\subsubsection{History Tracking}
-\paragraph\ The platform maintains comprehensive records of all student activities and achievements.
-The history system allows students to review their XP gains from each quest, track their progression over time and understand the relationship between their efforts and outcomes.
-
-\subsection{Faculty Management}
-
-\subsubsection{Quest Configuration}
-\paragraph\ Faculty members can create and manage quests through both individual interfaces and bulk Excel imports.
-The system allows for dynamic quest addition throughout the term, enabling responsive curriculum adjustment based on student needs and learning objectives.
-
-\subsubsection{Rank and XP Configuration}
-\paragraph\ Instructors have comprehensive control over rank thresholds and XP distribution.
-This flexibility enables adaptation to different course structures, student populations and learning objectives while maintaining game balance and engagement.
-
-\subsection{Assessment Integration}
-
-\subsubsection{Continuous Assessment Connection}
-\paragraph\ The gamification system integrates directly with academic assessment, allowing XP and rank progression to contribute to final course grades.
-This connection ensures that game mechanics support rather than distract from educational objectives.
-
-\subsubsection{Difficulty and Challenge Scaling}
-\paragraph\ The platform incorporates mechanisms for adjusting challenge levels and providing appropriate difficulty progression.
-This ensures that all students can find appropriate challenges while maintaining engagement across diverse skill levels and learning paces.
-\end{comment}
 
 \chapter{System Architecture and Design}
 \section{Requirements}
@@ -542,8 +811,8 @@ non-functional requirements were identified:
 \subsection{Evolution from Standalone Architecture}
 \noindent The LS architecture has withstood many iterations throughout the years and has become more complex and polished through them, as new features have been added, alternatives and changes in architecture have been thought as most adequate. Let's suppose we take the latest version as a baseline and dive into what can be improved.
 
-In the latest version of the Learning Scorecard, version 2.0, as documented
-by~\cite{lopes_ontologies_2021} the technological stack consisted of
+In the latest version of the Learning Scorecard, version 2.0, as documented by
+Miguel Lopes~\cite{lopes_ontologies_2021} the technological stack consisted of
 React~\cite{react_dev} frontend components communicating with
 Express~\cite{express_js} (NodeJS~\cite{nodejs_org}) backend services, which in
 turn interfaced through REST with a cloud-hosted NoSQL MongoDB
@@ -553,7 +822,7 @@ Heroku~\cite{heroku_platform}.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{images/LS2Architecture.png}
-  \caption{LS2.0 Technology Stack. Source: Lopes~\cite{lopes_ontologies_2021}.}
+  \caption{LS 2.0 architecture. Source: Lopes M.~\cite{lopes_ontologies_2021}.}
   \label{fig:ls2_arch}
 \end{figure}
 
@@ -593,10 +862,10 @@ institutional data governance policies.
 \subsection{Concept Mapping \& Integration Analysis}
 
 The successful integration of Learning Scorecard functionality within Moodle's
-existing architecture requires comprehensive analysis of conceptial alignments
+existing architecture requires comprehensive analysis of conceptual alignments
 and implementation feasibilities. This mapping process identifies opportunities
 for leveraging existing Moodle capabilities while determining areas that
-require custom implementation to preserve Learning Scorecard legacy features.
+require custom implementation to preserve Learning Scorecard's legacy features.
 
 \begin{center}
   \captionof{table}{Learning Scorecard vs Moodle Concept Mapping}
@@ -624,6 +893,65 @@ require custom implementation to preserve Learning Scorecard legacy features.
   \end{tabular}
   \caption*{T - Total Mapping  P - Partial Mapping}
 \end{center}
+
+\textbf{Total Mappings (T)}
+
+Total mappings exist when there are Moodle native functionalities that directly
+support the LS concept, no additional data structures or logic are required,
+integration can be achieved through standard API or database access or the
+semantic meaning aligns perfectly. That's the case for the concepts:
+
+\begin{itemize}
+  \item Course: Moodle natively supports course categorizations that represent
+        university courses such as ''Computer Science''.
+  \item Curricular Unit: Perfect mapping, each LS curricular unit corresponds direcly
+        to a Moodle course.
+  \item Student/Teacher: Moodle's role-based access control system directly supports
+        student and teacher roles. Permissions and course access are natively managed.
+  \item Sylabus Contents: Moodle's course module system supports 16 content types
+        (files, URLs, pages, quizzes, etc.). Tags provide semantic classification that
+        LS requires.
+  \item Quests: Direct conceptual mapping of LS quests and Moodle activities. All
+        necessary attributes available (deadlines, grading, completion tracking, etc.).
+  \item Alliances/Guilds: Moodle's native group system supports both course level
+        groups (guilds) and institution-wide cohorts (alliances).
+  \item Badges: Moodle includes a native badge system, with support for criteria-based
+        awarding and display.
+\end{itemize}
+
+\textbf{Partial Mappings (P)}
+
+A partial mapping occurs when Moodle provides a foundation but lacks specific
+LS requirements. These requirements can be achieved through custom development
+of business logic, user interface or data structures or the concept requires
+extending or combining multiple Moodles features. This additional effort is
+evident in the following concepts:
+
+\begin{itemize}
+  \item Calendar: While Moodle has a native calendar, extra quest metadata (XP values,
+        difficulty, etc.) is not native and thus requires additional implementation.
+  \item Timeline: Moodle tracks activity completion but doesn't provide LS's
+        chronological timeline view, it requries pulling data from multiple tables and
+        creating a custom visualization.
+  \item Experience Points: Moodle's gradebook can store percentage/point-based values
+        but isn't designed for XP systems. Further development is needed, such as
+        creating custom tables to store XP per activity and logic to calculate and
+        award XP based on quest completion through events and to display it.
+  \item Ranks: Moodle has no concept of progression ranks. It is required to create
+        entirely new data structures, rank-up notifications and visualization of rank
+        and rank progress.
+  \item Trophies: While badges provide the base, trohpies have specific implementation
+        efforts required, such as leaderboard-based logic and visualization.
+  \item Avatars: Moodle allows profile pictures but not customizable avatar systems.
+        Further development in avatar selection/customization interfaces and storage as
+        well as logic for the unlocks is required.
+  \item Leaderboards: Moodle's gradebook presents grades but not competitive rankings.
+        Additionally, it has no native leaderboard view and requires aggregating data
+        from multiple tables.
+  \item Last Chance System: Moodle's conditional access provides a foundation but lacks
+        "second chance" mechanics. Complex business logic beyond Moodle's simple
+        conditional rules is required.
+\end{itemize}
 
 \section{Development Environment and Technical Infrastructure}
 \noindent The establishment of a robust, consistent and production-like development environment proved critical for the successful implementation of LS 3.0. The complexity of Moodle plugin development, combined with the need for the system to mimick the production environment as much as possible, required careful consideration of development infrastructure and tooling decisions.
@@ -692,11 +1020,35 @@ administrative interfaces.
 
 \section{Database Design and Data Integration}
 
-\chapter{MVP}
-\section{System Components and Modular Design}
-\subsection{Student Interface and Experience}
-\subsection{Teacher Dashboard and Analytics}
-\subsection{Administrator Functions and Control}
+\chapter{Minimum Viable Product (MVP)}
+\section{Methodological Approach}
+\noindent The development methodology employed for the Learning Scorecard 3.0 MVP synthesizes principles from agile software development. This methodological approach recognizes the iterative nature where continuous refinement throughout the development process is imperative for successful MVP delivery.
+
+Initially it was intended for the implementation to follow a structured
+sprint-based approach with clearly defined objectives for each development
+iteration. Initial sprints focused on setting up a stable, production-like
+development environment, ensuring that the subsequent feature development could
+proceed upon a robust technical foundation.
+
+Subsequent stories tackled the core functionalities of the LS 3.0, such as
+leaderboards, experience points, database aggregation and finally, the block
+plugin.
+
+Even though the story implementations were ongoing and iterative, the
+dissertation development however did not follow the methodology strictly. This
+decision stemmed from the adoption of a lean agile approach tailored to
+individual academic research. In the absence of a development team, traditional
+agile ceremonies such as daily stand-ups, sprint planning and team
+retrospectives were deemed unnecessary overhead. In this context, the
+methodology evolved organically toward a more streamlined process that
+preserved agile's iterative essence while acknowledging the realities of solo
+development in an academic setting. Weekly review sessions with supervisors
+Prof.~Elsa Cardoso and Prof.~José Barateiro functioned as consolidated sprint
+reviews and retrospectives, providing critical feedback loops while maintaining
+development momentum.
+
+This adapted approach enabled rapid iteration and continuous validation while
+maintaining academic rigor throughout the development process.
 
 \chapter{Evaluation and Results}
 \section{Demonstration of Key Features}
@@ -709,67 +1061,7 @@ administrative interfaces.
 \section{Limitations and Challenges}
 \section{Future Directions for LS}
 
-\renewcommand{\bibname}{References}
-
-\def\bibindent{0.7cm}
-\begin{thebibliography}{99\kern\bibindent}
-  \makeatletter
-  \let\old@biblabel\@biblabel
-  \def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
-  \let\old@bibitem\bibitem
-  \def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
-  \makeatother
-  \makeatletter
-  \renewcommand\@biblabel[1]{}
-  \makeatother
-
-  \bibitem{deterding_gamification_2011} S. Deterding, R. Khaled, L. Nacke and D. Dixon (2011), \textquotedblleft Gamification: Toward a definition\textquotedblright, \textit{Proceedings of CHI 2011 Workshop Gamification: Using Game Design Elements in Non-Game Contexts}, 6--9.
-
-  \bibitem{koh_shifting_2022} J. H. L. Koh and B. K. Daniel (2022), \textquotedblleft Shifting online during COVID-19: A systematic review of teaching and learning strategies and their outcomes\textquotedblright, \textit{International Journal of Educational Technology in Higher Education}, 19(1), 56.
-
-  \bibitem{mohd_kasim_choosing_2016} N.N. Mohd Kasim and F. Khalid (2016), \textquotedblleft Choosing the Right Learning Management System (LMS) for the Higher Education Institution Context: A Systematic Review\textquotedblright, \textit{International Journal of Emerging Technologies in Learning (iJET)}, 11(6), 55.
-
-  \bibitem{cavus_comparison_2014} N. Cavus and T. Zabadi (2014), \textquotedblleft A Comparison of Open Source Learning Management Systems\textquotedblright, \textit{Procedia - Social and Behavioral Sciences}, 143, 521--526.
-
-  \bibitem{altinpulluk_systematic_2021} H. Altinpulluk and M. Kesim (2021), \textquotedblleft A Systematic Review of the Tendencies in the Use of Learning Management Systems\textquotedblright, \textit{Turkish Online Journal of Distance Education}, 22(3), 40--54.
-
-  \bibitem{moodle_stats_2025} Moodle (2025), \textquotedblleft Moodle Statistics\textquotedblright, Available at: https://stats.moodle.org/ (Accessed: 6 August 2025).
-
-  \bibitem{dolawattha_impact_2019} D.D.M. Dolawattha, H.K.S. Pramadasa and P.M. Jayaweera (2019), \textquotedblleft The Impact Model: Teachers' Mobile Learning Adoption in Higher Education\textquotedblright, \textit{International Journal of Education and Development using Information and Communication Technology (IJEDICT)}, 15(4), 71--88.
-
-  \bibitem{saroja_functional_2023} S. Saroja and S. Haseena (2023), \textquotedblleft Functional and Non-Functional Requirements in Agile Software Development\textquotedblright, in \textit{Agile Software Development}, John Wiley \& Sons, Ltd, pp. 71--86.
-
-  \bibitem{costa_thesis_2017} D.S. Costa (2017), \textquotedblleft Learning Scorecard: Plataforma para a Monitorização da Experiência de Aprendizagem de Alunos no Ensino Superior Aplicando Técnicas de Business Intelligence e Gamificação\textquotedblright, Master's Thesis, ISCTE-IUL, Lisbon, Portugal.
-
-  \bibitem{react_dev} Meta Platforms, Inc. (2024), \textquotedblleft React: The Library for Web and Native User Interfaces\textquotedblright, Available at: https://react.dev/ (Accessed: 28 August 2025).
-
-  \bibitem{express_js} OpenJS Foundation (2024), \textquotedblleft Express: Fast, Unopinionated, Minimalist Web Framework for Node.js\textquotedblright, Available at: https://expressjs.com/ (Accessed: 28 August 2025).
-
-  \bibitem{nodejs_org} OpenJS Foundation (2024), \textquotedblleft Node.js: JavaScript Runtime Built on Chrome's V8 JavaScript Engine\textquotedblright, Available at: https://nodejs.org/en/ (Accessed: 28 August 2025).
-
-  \bibitem{azure_microsoft} Microsoft Corporation (2024), \textquotedblleft Microsoft Azure: Cloud Computing Platform and Services\textquotedblright, Available at: https://azure.microsoft.com/en-us/ (Accessed: 28 August 2025).
-
-  \bibitem{mongodb_database} MongoDB, Inc. (2024), \textquotedblleft MongoDB: The Developer Data Platform\textquotedblright, Available at: https://www.mongodb.com/ (Accessed: 28 August 2025).
-
-  \bibitem{graphdb_ontotext} Ontotext (2024), \textquotedblleft GraphDB: Enterprise Ready RDF Database\textquotedblright, Available at: https://graphdb.ontotext.com/ (Accessed: 28 August 2025).
-
-  \bibitem{heroku_platform} Salesforce, Inc. (2024), \textquotedblleft Heroku: Cloud Application Platform\textquotedblright, Available at: https://www.heroku.com/ (Accessed: 28 August 2025).
-
-  \bibitem{lopes_ontologies_2021} M.Â.D. Lopes (2021), \textquotedblleft Utilização de ontologias para a gestão de dados educacionais: caso de estudo Learning Scorecard\textquotedblright, Master's Thesis, ISCTE - Instituto Universitário de Lisboa, Lisbon, Portugal.
-
-  \bibitem{heroku_pricing} Salesforce, Inc. (2024), \textquotedblleft Heroku Pricing\textquotedblright, Available at: https://www.heroku.com/pricing/ (Accessed: 28 August 2025).
-
-  \bibitem{git_scm} Git Community (2024), \textquotedblleft Git: Distributed Version Control System\textquotedblright, Available at: https://git-scm.com/.
-
-  \bibitem{apache_friends_xampp} Apache Friends (2024), \textquotedblleft XAMPP Apache + MariaDB + PHP + Perl\textquotedblright, Available at: https://www.apachefriends.org/.
-
-  \bibitem{docker_containers} Docker Inc. (2024), \textquotedblleft Docker: Accelerated Container Application Development\textquotedblright, Available at: https://www.docker.com/.
-
-  \bibitem{bitnami_cloud} Bitnami (2024), \textquotedblleft Bitnami: Packaged Applications for Any Platform\textquotedblright, Available at: https://bitnami.com/.
-
-  \bibitem{mariadb_database} MariaDB Foundation (2024), \textquotedblleft MariaDB Server: The Open Source Relational Database\textquotedblright, Available at: https://mariadb.org/.
-
-  \bibitem{moodle_plugin_api} Moodle Pty Ltd (2024), \textquotedblleft Plugin Types API Documentation\textquotedblright, Moodle Developer Resources, Available at: https://moodledev.io/docs/4.1/apis/plugintypes.
-\end{thebibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
 
 \end{document}

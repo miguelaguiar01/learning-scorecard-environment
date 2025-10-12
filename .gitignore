@@ -43,3 +43,9 @@ Thumbs.db
 docker-compose.override.yml
 docker-compose.*.yml
 !docker-compose.example.yml
+docs/LS_Thesis/LS_Thesis.aux
+docs/LS_Thesis/LS_Thesis.fdb_latexmk
+docs/LS_Thesis/LS_Thesis.fls
+docs/LS_Thesis/LS_Thesis.synctex.gz
+docs/LS_Thesis/LS_Thesis.toc
+backup_before_update.sql
