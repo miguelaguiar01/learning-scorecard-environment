@@ -60,11 +60,107 @@ D.~D.~M. Dolawattha, H.~K.~S. Pramadasa, and P.~M. Jayaweera, ``The impact
   \emph{International Journal of Education and Development using Information
   and Communication Technology (IJEDICT)}, vol.~15, no.~4, pp. 71--88, 2019.
 
+\bibitem{sailer2020gamification}
+M.~Sailer and L.~Homner, ``The gamification of learning: {A} meta-analysis,''
+  \emph{Educational Psychology Review}, vol.~32, no.~1, pp. 77--112, 2020.
+
+\bibitem{hanus2015assessing}
+M.~D. Hanus and J.~Fox, ``Assessing the effects of gamification in the
+  classroom: {A} longitudinal study on intrinsic motivation, social comparison,
+  satisfaction, effort, and academic performance,'' \emph{Computers \&
+  Education}, vol.~80, pp. 152--161, 2015.
+
+\bibitem{smiderle2020impact}
+R.~Smiderle, S.~J. Rigo, L.~B. Marques, J.~A. Peçanha~de Miranda~Coelho, and
+  P.~A. Jaques, ``The impact of gamification on students' learning, engagement
+  and behavior based on their personality traits,'' \emph{Smart Learning
+  Environments}, vol.~7, no.~1, p.~3, 2020.
+
+\bibitem{dichev2017gamifying}
+C.~Dichev and D.~Dicheva, ``Gamifying education: what is known, what is
+  believed and what remains uncertain: a critical review,'' \emph{International
+  Journal of Educational Technology in Higher Education}, vol.~14, no.~1, p.~9,
+  2017.
+
+\bibitem{deci1985intrinsic}
+E.~L. Deci and R.~M. Ryan, \emph{Intrinsic Motivation and Self-Determination in
+  Human Behavior}, ser. Perspectives in Social Psychology.\hskip 1em plus 0.5em
+  minus 0.4em\relax Boston, MA: Springer, 1985.
+
+\bibitem{ryan2006motivational}
+R.~M. Ryan, C.~S. Rigby, and A.~Przybylski, ``The motivational pull of video
+  games: {A} self-determination theory approach,'' \emph{Motivation and
+  Emotion}, vol.~30, no.~4, pp. 344--360, 2006.
+
+\bibitem{ryan2019motivational}
+R.~M. Ryan and C.~S. Rigby, ``Motivational foundations of game-based
+  learning,'' in \emph{Handbook of Game-Based Learning}, J.~L. Plass, R.~E.
+  Mayer, and B.~D. Homer, Eds.\hskip 1em plus 0.5em minus 0.4em\relax
+  Cambridge, MA: MIT Press, 2019, pp. 153--176.
+
+\bibitem{xi2019does}
+N.~Xi and J.~Hamari, ``Does gamification satisfy needs? {A} study on the
+  relationship between gamification features and intrinsic need satisfaction,''
+  \emph{International Journal of Information Management}, vol.~46, pp.
+  210--221, 2019.
+
+\bibitem{csikszentmihalyi1990flow}
+M.~Csikszentmihalyi, \emph{Flow: The Psychology of Optimal Experience}.\hskip
+  1em plus 0.5em minus 0.4em\relax New York, NY: Harper \& Row, 1990.
+
+\bibitem{koivisto2019rise}
+J.~Koivisto and J.~Hamari, ``The rise of motivational information systems: {A}
+  review of gamification research,'' \emph{International Journal of Information
+  Management}, vol.~45, pp. 191--210, 2019.
+
+\bibitem{li2024leaderboards}
+J.~Li and L.~K. Fryer, ``The use of leaderboards in education: {A} systematic
+  review of empirical evidence in higher education,'' \emph{Journal of Computer
+  Assisted Learning}, vol.~40, pp. 1077--1095, 2024.
+
+\bibitem{park2022points}
+S.~Park and S.~Kim, ``Points and the delivery of gameful experiences in a
+  gamified environment: {Framework} development and case analysis,'' \emph{JMIR
+  Serious Games}, vol.~10, no.~4, p. e39797, 2022.
+
+\bibitem{paiva2015badges}
+R.~Paiva, A.~Barbosa, E.~Batista, D.~Pimentel, and I.~I. Bittencourt, ``Badges
+  and {XP}: an observational study about learning,'' \emph{Frontiers in
+  Education Conference (FIE)}, pp. 1--8, 2015.
+
 \bibitem{costa_thesis_2017}
 D.~S.~d. Costa, ``Learning scorecard: Plataforma para a monitorização da
   experiência de aprendizagem de alunos no ensino superior aplicando técnicas
   de business intelligence e gamificação,'' Master's Thesis, ISCTE-IUL,
   Lisbon, Portugal, 2017.
+
+\bibitem{bootstrap_framework}
+\BIBentryALTinterwordspacing
+{Bootstrap Team}, ``Bootstrap: The most popular html, css, and js library in
+  the world,'' 2024, accessed: 28 August 2025. [Online]. Available:
+  \url{https://getbootstrap.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{chartjs_org}
+\BIBentryALTinterwordspacing
+{Chart.js Contributors}, ``Chart.js: Simple yet flexible javascript charting
+  for designers \& developers,'' 2024, accessed: 28 August 2025. [Online].
+  Available: \url{https://www.chartjs.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{mysql_database}
+\BIBentryALTinterwordspacing
+{Oracle Corporation}, ``Mysql: The world's most popular open source database,''
+  2024, accessed: 28 August 2025. [Online]. Available:
+  \url{https://www.mysql.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{nodejs_org}
+\BIBentryALTinterwordspacing
+{OpenJS Foundation}, ``Node.js: Javascript runtime built on chrome's v8
+  javascript engine,'' 2024, accessed: 28 August 2025. [Online]. Available:
+  \url{https://nodejs.org/en/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{hunicke_mda_2004}
 R.~Hunicke, M.~LeBlanc, and R.~Zubek, ``Mda: A formal approach to game design
@@ -105,13 +201,6 @@ S.~Saroja and S.~Haseena, ``Functional and non-functional requirements in agile
 {OpenJS Foundation}, ``Express: Fast, unopinionated, minimalist web framework
   for node.js,'' 2024, accessed: 28 August 2025. [Online]. Available:
   \url{https://expressjs.com/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{nodejs_org}
-\BIBentryALTinterwordspacing
-------, ``Node.js: Javascript runtime built on chrome's v8 javascript engine,''
-  2024, accessed: 28 August 2025. [Online]. Available:
-  \url{https://nodejs.org/en/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{mongodb_database}
