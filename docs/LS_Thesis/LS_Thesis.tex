@@ -138,7 +138,7 @@ estabelecidas.
 3.0, an iteration of a gamified learning analytics platform previously
 developed as a standalone web application, implemented as a native Moodle
 plugin system. This iteration addresses critical limitations of previous
-implementations and serves as a proof of concept to reconceptualize the
+implementations and serves as a proof-of-concept to reconceptualize the
 platform's architecture as an integrated learning management system component.
 This solution leverages Moodle's native authentication, role-bsed access
 control and comprehensive student activity data to eliminate friction points
@@ -164,7 +164,7 @@ gamification systems wihtin established learning management platforms.
 
 \chapter{Introduction}
 \section{Background \& Context}
-\noindent The landscape of higher education has undergone significant transformation through the widespread adoption of digital technologies and learning management systems. This digital evolution has created unprecendented opportunities for institutions to leverage data analytics and innovative pegagogical approaches in order to enhance student learning outcomes and insitutional effectiveness. Within this context, the integration of gamification principles with educational analytics represents a promising avenue for addressing persistent challenges in student engagement, motivation and academic performance monitoring.
+\noindent The landscape of higher education has undergone significant transformation through the widespread adoption of digital technologies and learning management systems. This digital evolution has created unprecedented opportunities for institutions to leverage data analytics and innovative pedagogical approaches in order to enhance student learning outcomes and institutional effectiveness. Within this context, the integration of gamification principles with educational analytics represents a promising avenue for addressing persistent challenges in student engagement, motivation and academic performance monitoring.
 
 The concept of gamification, defined as the application of game design elements
 in non-game contexts~\cite{deterding_gamification_2011}, has gained
@@ -172,8 +172,8 @@ considerable traction in educational settings as a mechanism for increasing
 student motivation and engagement. When combined with learning analytics, which
 involves the measurement, collection, analysis and reporting of data about
 students and their contexts for purposes of understanding and optimizing
-learning, gamification can prove to be a powerful tool for both students and
-teachers, both to monitor and improve the learning process.
+learning, gamification can be a powerful tool for both students and teachers,
+both to monitor and improve the learning process.
 
 The Learning Scorecard perfectly exemplifies this convergence of gamification
 and educational analytics. Originally conceived as an academic performance
@@ -203,10 +203,10 @@ costs and security vulnerabilities; third, it creates data silos, isolated
 collections of data that prevent seamless integration and data sharing with
 existing institutional learning management systems.
 
-The current system requires substancial manual data entry from both students
+The current system requires substantial manual data entry from both students
 and faculty in order to populate the platform with the necessary academic and
 performance information. This manual input requirement creates multiple
-friction points: Students must duplicate the effort of entering information
+friction points: Students must duplicate the effort by entering information
 that already exists in institutional systems; faculty members face additional
 administrative burdens in maintaining accurate records of data across multiple
 platforms, for example, the need to create another account, leading to another
@@ -224,23 +224,23 @@ the data already collected through learning management systems like Moodle.
 The Learning Scorecard stemmed from an investigation project and had no
 institutional support in its development or maintenance. The development was
 made in ISCTE, by students, but the goal was always to create a scalable
-learning tool that could be integrated seamlessly in other universities or
+learning platform that could be integrated seamlessly in other universities or
 learning institutions.
 
 These challenges collectively result in a reduced user adoption, increased
 maintenance costs and compromised data accuracy.
 
 \section{Aims and Objectives}
-\noindent This dissertation addresses the identified limitations through the development and evaluation of a Learning Scorecard version 3.0, which fundamentally reconceptualizes the platform's architecture and deployment strategy by inverting it and explore the feasibility of integrating the Learning Scorecard with the moodle system and infrastructure.
+\noindent This dissertation addresses the identified limitations through the development and evaluation of a Learning Scorecard version 3.0, which fundamentally reconceptualizes the platform's architecture and deployment strategy by inverting it and exploring the feasibility of integrating the Learning Scorecard with the Moodle system and infrastructure.
 
 From a technical perspective, this dissertation aims to: (1) design and
-implement a modular plugin architecture that could seamlessly integrate with
+implement a modular plugin architecture that can seamlessly integrate with
 ISCTE's Moodle infrastructure; (2) develop automated data collection mechanism
 that leverage Moodle's comprehensive student activity and performance data; (3)
 create user interfaces that maintain consistency with Moodle's design patterns
-while providing functionality of the Learning Scorecard platform; (4) ensure
-data security and privacy protection through adherence to Moodle's established
-security frameworks.
+while providing the functionality of the Learning Scorecard platform; (4)
+ensure data security and privacy protection through adherence to Moodle's
+established security frameworks.
 
 This dissertation also seeks to validate the effectiveness of the integrated
 approach through: (1) demonstration of reduced manual input requirements
@@ -261,7 +261,7 @@ This dissertation employs a lean agile methodology, combining the iterative
 nature of software development with a sprint-based approach with clearly
 defined objectives. The lean agile methodology allowed for a more organic and
 streamlined process, without abandoning the agile's iterative concept but
-letting go of some traditional agile cerimonies unecessary for an individual
+letting go of some traditional agile ceremonies unnecessary for an individual
 academic research team.
 
 The initial phase involved an analysis of existing Learning Scorecard
@@ -277,8 +277,8 @@ tested and refined throughout the process. The development approach emphasizes
 modular design and adherence to Moodle coding standards to ensure compatibility
 with Moodle's ecosystem. Key deliverables include a block plugin to exemplify a
 user interface component of the student interface and a local plugin for main
-functionality and who's responsible for the addition of database schemas that
-integrate with Moodle's existing data structures.
+functionality and which is responsible responsible for the addition of database
+schemas that integrate with Moodle's existing data structures.
 
 \section{Structure of the Dissertation}
 \noindent This dissertation is organized into seven chapters that systematically address the objectives and present the development, implementation and evaluation of Learning Scorecard 3.0.
@@ -287,7 +287,7 @@ Chapter 2 provides comprehensive background on learning management systems,
 with particular focus on Moodle's architecture and capabilities and examines
 the theoretical foundations and practical applications of gamification in
 educational contexts. This chapter establishes the theoretical framework that
-suplements the design decisions throughout the dissertation.
+supports the gamification design decisions throughout the dissertation.
 
 In chapter 3 the historical development of the Learning Scorecard is traced
 through its various iterations, analyzing the lessons learned from previous
@@ -296,8 +296,8 @@ Scorecard.
 
 Chapter 4 presents the technical architecture of the Learning Scorecard 3.0,
 including detailed requirements analysis, system design decisions, plugin
-architecture specification and database design. It's also presented a detailed
-mapping of Learning Scorecard concept to Moodle's existing functionality and
+architecture specification and database design. It also presents a detailed
+mapping of Learning Scorecard concepts to Moodle's existing functionality and
 its mapping feasibility. This chapter provides the technical foundation for
 understanding the implementation approach and design rationale.
 
@@ -305,16 +305,18 @@ Chapter 5 describes the key deliverables and presents the proposed solution and
 serves as a demonstration of some functionality from the Learning Scorecard and
 its feasibility as Moodle integrated plugins.
 
-Chapter 6
+Chapter 6 concludes this dissertation and provides recommendation for
+institutional use and adoption while also providing guidance to the next
+iterations of the Learning Scorecard.
 
 \chapter{Literature Review}
 \section{Learning Management Systems}
-\noindent Learning Management Systems (LMS) represent sophisticated software applications engineered to administer, track, report, automate and deliver educational courses, training programs and comprehensive learning materials. Following their initial emergence in the late 1990s, these platforms have achieved significant adoption across higher education institutions globally. Recently, the unprecedented expansion of LMS usage has been significantly accelerated by the institutional shift toward remote learning by the COVID-19 pandemic.~\cite{koh_shifting_2022}
+\noindent Learning Management Systems (LMS) represent sophisticated software applications engineered to administer, track, report, automate and deliver educational courses, training programs and comprehensive learning materials. Following their initial emergence in the late 1990s, these platforms have achieved significant adoption across higher education institutions globally. Recently, the unprecedented expansion of LMS usage has been significantly accelerated by the institutional shift toward remote learning during the COVID-19 pandemic.~\cite{koh_shifting_2022}
 
 There are several LMS available for educational institutions, with commercial
 and open-source platforms representing the two primary categories of LMS
 offerings~\cite{mohd_kasim_choosing_2016}. Commercial LMS are either available
-in the market for a price or, although very rarely, proprietary and developped
+in the market for a price or, although very rarely, proprietary and developed
 by the institution. In contrast, the open source alternative is available at no
 cost to the institution, although technical expertise is required as well as
 regular functional assessments. Open-source systems provide publicly accessible
@@ -348,17 +350,17 @@ plugin ecosystem.
 \end{figure}
 
 Moodle offers many plugins that allow for functionality expansion. There are
-multiple types of plugins from local plugins, block plugins all the way to
-antivirus plugins. Each with its own purpose and place in the moodle folder
+multiple types of plugins from local plugins, block plugins, all the way to
+antivirus plugins. Each with its own purpose and place in the Moodle folder
 structure.
 
 \section{Gamification and Motivation in Education}
-\noindent~Gamification is the process of applying game elements, design and mechanics to non-game contexts~\cite{deterding_gamification_2011} and when applied to higher education it demonstrated a noticeable positive effect on learning outcomes~\cite{sailer2020gamification}. However, when poorly designed and implemented, particularly when relying solely on points, badges and leaderboards without supporting intrinsic motivation, gamification can undermine student motivation~\cite{hanus2015assessing} and create anxiety through excessive competition~\cite{smiderle2020impact}.
+\noindent~Gamification is the process of applying game elements, design and mechanics to non-game contexts~\cite{deterding_gamification_2011}. When applied to higher education it has demonstrated a noticeable positive effect on learning outcomes~\cite{sailer2020gamification}. However, when poorly designed and implemented, particularly when relying solely on points, badges and leaderboards without supporting intrinsic motivation, gamification can undermine student motivation~\cite{hanus2015assessing} and create anxiety through excessive competition~\cite{smiderle2020impact}.
 The field faces significant methodological challenges with 50\% of studies
 showing inconclusive results~\cite{dichev2017gamifying}.
 
 \subsection{Theoretical Foundations of Gamification}
-\noindent~The Self-Determination Theory (SDT) provides the dominant theoretical lens for understanding gamification effectiveness in educational contexts~\cite{deci1985intrinsic}. According to Deci and Ryan, SDT poses that human motivation stems from satisfaction of three innate psychological needs: autonomy (self-determination and willing action), competence (mastery and effectiveness) and relatedness (social connection and belongingness), The theory distinguishes between intrinsic motivation (engaging in activities for inherent satisfaction) and extrinsic motivation (from purely reward-driven to fully internalized values)~\cite{smiderle2020impact}. Ryan and Deci's later update demonstrates that autonomy-supportive environments enhance student motivation, engagement, performance and well-being across diverse cultural contexts.
+\noindent~The Self-Determination Theory (SDT) provides the dominant theoretical lens for understanding gamification effectiveness in educational contexts. According to Deci and Ryan~\cite{deci1985intrinsic}, SDT postulates how human motivation stems from satisfaction of three innate psychological needs: autonomy (self-determination and willing action), competence (mastery and effectiveness) and relatedness (social connection and belongingness), The theory distinguishes between intrinsic motivation (engaging in activities for inherent satisfaction) and extrinsic motivation (from purely reward-driven to fully internalized values)~\cite{smiderle2020impact}. Deci and Ryan's~\cite{ryan2020intrinsic} later update demonstrates that autonomy-supportive environments enhance student motivation, engagement, performance and well-being across diverse cultural contexts.
 
 The application of SDT to game design emerged with Ryan, Rigby and
 Przybylski's~\cite{ryan2006motivational} work demonstrating that video game
@@ -371,36 +373,36 @@ superficial gamification relying solely on extrinsic rewards threatens these
 very needs.
 
 Empirical research confirms SDT's power for gamification outcomes. Sailer et
-al. experimentally tested how specific game design elements influence need
-satisfaction, finding that different mechanisms satisfy different needs:
-avatars and storylines increased perceived autonomy; leaderboards and
-performance graphs increased perceived competence; teammates and meaningful
-narratives increased perceived relatedness. Xi and Hamari~\cite{xi2019does}
-demonstrated that need satisfaction mediates the relationship between
-gamification features and positive outcomes, providing empirical support for
-matching game mechanics to psychological needs.
+al.~\cite{sailer2017gamification} experimentally tested how specific game
+design elements influence need satisfaction, finding that different mechanisms
+satisfy different needs: avatars and storylines increased perceived autonomy;
+leaderboards and performance graphs increased perceived competence; teammates
+and meaningful narratives increased perceived relatedness. Xi and
+Hamari~\cite{xi2019does} demonstrated that need satisfaction mediates the
+relationship between gamification features and positive outcomes, providing
+empirical support for matching game mechanics to psychological needs.
 
 Csikszentmihalyi's~\cite{csikszentmihalyi1990flow} Flow Theory complements SDT
-by describing the construction of the optimal experience, complete absorptionin
-an activity characterized by nine dimensions including challenge-skill balance,
-clear goals, unambiguous feedback, total concentration, sense of control and
-transformation of time. Flow occurs when challenges and skills are both high
-and balanced, creating intrinsically rewarding experiences distinct from simple
-instantaneous pleasure. The original description positioned flow as the
-antidote to both boredom (when skills exceed challenges) and anxiety (when
+by describing the construction of the optimal experience, complete absorption
+in an activity characterized by nine dimensions including challenge-skill
+balance, clear goals, unambiguous feedback, total concentration, sense of
+control and transformation of time. Flow occurs when challenges and skills are
+both high and balanced, creating intrinsically rewarding experiences distinct
+from simple instantaneous pleasure. The original description positioned flow as
+the antidote to both boredom (when skills exceed challenges) and anxiety (when
 challenges exceed skills).
 
 The integration of SDT and Flow Theory provides a comprehensive motivational
 framework: SDT explains why gamification works through need satisfaction, while
 Flow Theory describes the optimal state when competence needs are met through
 balanced challenge-skill dynamics, supported by autonomy and relatedness.
-Proulx et al. proposed integrating learning mechanics with game mechanics under
-this dual theoretical lens, distinguishing between game mechanics (rules and
-procedures) and learning mechanics (pedagogical strategies) while ensuring
-alignment with psychological need satisfaction.
+Proulx et al.~\cite{proulx2017learning} proposed integrating learning mechanics
+with game mechanics under this dual theoretical lens, distinguishing between
+game mechanics (rules and procedures) and learning mechanics (pedagogical
+strategies) while ensuring alignment with psychological need satisfaction.
 
 \subsection{Gamification Mechanics}
-\noindent~The critical factor determining whether gamificatin supports or undermines motivation appears to be implementation approach. Koivisto and Hamari~\cite{koivisto2019rise} reviewed gamification research and indentified a gap between promise and practice, noting that the most effective implementations are grounded in motivational theory rather than superficial application of game elements.
+\noindent~The critical factor determining whether gamification supports or undermines motivation appears to be implementation approach. Koivisto and Hamari~\cite{koivisto2019rise} reviewed gamification research and identified a gap between promise and practice, noting that the most effective implementations are grounded in motivational theory rather than superficial application of game elements.
 
 Leaderboards exemplify gamification's most controversial element driving
 engagement for some learners while creating anxiety and demotivation for
@@ -412,7 +414,7 @@ benefit high-performing students but have negative consequences for
 underperforming ones, shifting focus from learning to ranking.
 
 Points systems represent the most fundamental gamification mechanic, providing
-immediate quatitative feedback for actions and achievements. Park and
+immediate quantitative feedback for actions and achievements. Park and
 Kim~\cite{park2022points} distinguished between qualitative points (high/low
 scores displayed on leaderboards) and quantitative points (accumulative
 token-like currencies), noting that points are the most widely used game
@@ -431,7 +433,7 @@ Kim~\cite{park2022points} identify as the Zeigarnik effect, the psychological
 need to complete unfinished tasks. They provide immediate visual feedback that
 makes abstract advancement concrete and visible.
 
-When properly implemented, with theorectical rigor, gamification demonstrates
+When properly implemented, with theoretical rigor, gamification demonstrates
 genuine potential to enhance cognitive, motivational and behavioral outcomes.
 The challenge for higher education is moving beyond the superficial
 implementation toward sophisticated applications that follow what motivational
@@ -439,7 +441,7 @@ psychology teaches about human learning and development.
 
 \chapter{The Learning Scorecard: Concept and Evolution}
 \section{Genesis and Conceptualization of the Learning Scorecard}
-\noindent The Learning Scorecard emerged from a fundamental pedagogical challenge identified within higher educational institutions: the lack of understanding by faculty members regarding the difficulties experienced by students in relation to the content taught in curricular units as well as the students lack motivation in respect to the academic autonomous work. Initially, this platform was conceptualized as an academic performance management system designed to support both students and faculty through data-driven insights that assist teachers in continuously monitoring the curricular units they teach while enabling students to visualize their performance in each course in which they are enrolled. Their main mission was to offer higher education students an analytic environment that allows progress monitorization through a familiar game-like scope, contributing for a better learning experience.
+\noindent The Learning Scorecard emerged from a fundamental pedagogical challenge identified within higher educational institutions: the lack of understanding by faculty members regarding the difficulties experienced by students in relation to the content taught in curricular units as well as the students' lack motivation with respect to the academic autonomous work. Initially, this platform was conceptualized as an academic performance management system designed to support both students and faculty through data-driven insights that assist teachers in continuously monitoring the curricular units they teach while enabling students to visualize their performance in each course in which they are enrolled. Their main mission was to offer higher education students an analytic environment that allows progress monitorization through a familiar game-like scope, contributing to a better learning experience.
 
 The platform was originally conceptualized with three distinct user
 perspectives: student view, teacher view and administrative view. The student
@@ -448,12 +450,12 @@ learning trajectory in a specific curricular unit while offering tools that
 provide important data for continuous monitoring by faculty. The teacher view
 provides management, evaluations and visualization tools for educators
 regarding each curricular unit they teach, offering various visualizations to
-track the collective students progress through all phases of the curricular
+track the collective students' progress through all phases of the curricular
 unit along with assessment tools.
 
 \section{Evolution Through Iterative Development}
 \subsection{Historical Overview of Versions}
-\noindent The Learning Scorecard concept began in the 2015/16 academic year as a collaborative project project undertaken by a group of Computer Science masters students enrolled in the Information Systems of Decision Support II curricular unit under the advice of Prof.~Elsa Cardoso. This group defined in a very basic and introductory way what the LS would be, later being picked up by Daniela Costa~\cite{costa_thesis_2017} who built upon this concept, improving it and setting the course for the following iterations..
+\noindent The Learning Scorecard concept began in the 2015/16 academic year as a collaborative project undertaken by a group of Computer Science masters students enrolled in the Information Systems of Decision Support II curricular unit under the advice of Prof.~Elsa Cardoso. This group defined in a very basic and introductory way what the LS would be, later being picked up by Daniela Costa~\cite{costa_thesis_2017} who built upon this concept, improving it and setting the course for the following iterations.
 
 The development timeline reflects the progression of features and refinements
 with each major version addressing specific limitations and opportunities
@@ -469,7 +471,7 @@ maintaining consistency in core design principles.
 This version adopted conventional three-tier web application architecture,
 comprising distinct presentation, application and data layers. This
 architectural pattern, while traditional, provided a stable foundation for the
-initial implementation and facilitated separation of concerns accross system
+initial implementation and facilitated separation of concerns across system
 components.
 
 The presentation layer was constructed using fundamental web technologies
@@ -481,16 +483,16 @@ to facilitate the creation of interactive dashboard and data visualizations,
 essential for performance monitoring. The application layer was built upon
 Node.js, with Express.js as the web application framework, providing routing
 capabilities and middleware integration. MySQL~\cite{mysql_database} was
-selected as the relational database management system (RDBMS), choosen for its
+selected as the relational database management system (RDBMS), chosen for its
 compatibility with Node.js's~\cite{nodejs_org} asynchronous architecture and
 its widespread adoption in academic environments. The database schema was
 designed to accommodate user profiles, course information, assessment data and
 gamification elements.
 
 This platform was deployed in the SIAD I (Data Warehouse and Business
-Intelligence) course during the 2016/2017 academic year. Comparative analysis
+Intelligence) course during the 2016/2017 academic year. A comparative analysis
 with the previous academic year (2015/2016, without LS implementation) revealed
-statistically significant improvements accross multiple performance indicators.
+statistically significant improvements across multiple performance indicators.
 The approval rate of students increased from 86\% to 92\%, the mean grade
 improved from 13.25 to 13.74 (on a 0-20 scale), the number of failed students
 decreased from 17 to 10 students and the number of students that withdrew from
@@ -515,14 +517,14 @@ Educational gamification implementations frequently suffer from superficial
 application of game elements, often limited to points, badges and leaderboards
 (PBL), without systematic consideration of how these mechanics connect to
 student motivation and desired learning outcome. Pedroso's focus was to analyze
-how gamification can be systematically designed to enhance student's engagement
+how gamification can be systematically designed to enhance students' engagement
 and motivation. Rações however, focused on how student learning progress in
 higher education courses is typically not monitored in real-time. His
-contribution was mainly on students perception of their learning progress
+contribution was mainly on students' perception of their learning progress
 through well-designed dashboards and visualization techniques.
 
 This version maintained and incrementally enhanced the core technological
-foundation estabilished in version 0 with the key technical enhancements being:
+foundation established in version 0 with the key technical enhancements being:
 (1) expanded data collection mechanisms for additional learning indicators; (2)
 enhanced dashboard rendering capabilities, supporting more complex
 visualizations; (3) improved gamification element tracking and state
@@ -554,7 +556,7 @@ mechanics intended to generate specific dynamics and aesthetic outcomes.
       \item[1.] Experience Points (XP) System
             \begin{itemize}
                   \item Awarded for completion of learning activities (quizzes, assignments, etc.).
-                  \item Cumullative XP tracking throughout the semester.
+                  \item Cumulative XP tracking throughout the semester.
                   \item Transparent XP calculation rules communicated to students.
             \end{itemize}
       \item[2.] Badge System
@@ -614,32 +616,33 @@ mechanics intended to generate specific dynamics and aesthetic outcomes.
             learning objectives.
       \item Discovery: Facilitating exploration of course content and connections between
             concepts.
-      \item Progression: Providing clear sense of advancement and competence development.
+      \item Progression: Providing a clear sense of advancement and competence development.
       \item Fellowship: Creating awareness of collective class journey and peer community.
-      \item Narrative: Structuring semester as coherent learning journey milestones.
+      \item Narrative: Structuring the semester as a coherent learning with journey
+            milestones.
 \end{itemize}
 
 Rações's contributed mainly by developing comprehensive dashboard interfaces
-for both students and faculty and by indentifying and implementing core
-learning indicators categorized in three dimensions: engagement indicators,
-coginitive indicators and social indicators.
+for both students and faculty and by identifying and implementing core learning
+indicators categorized in three dimensions: engagement indicators, cognitive
+indicators and social indicators.
 
 Engagement indicators measured the interactions with the learning contents,
-frequency of access to the platform and submission timeliness. Whereas
-cognitive indicators tracked grade and performance trends, quiz attempts before
-achieving success, performance consistency and improvement trajectories. The
-social indicators provided a measure on forum posting frequency and
-consistency, peer interaction patterns and collaborative activity participation
-and contribution quality.
+frequency of access to the platform and submission timeliness. Cognitive
+indicators tracked grade and performance trends, quiz attempts before achieving
+success, performance consistency and improvement trajectories. The social
+indicators provided a measure of forum posting frequency and consistency, peer
+interaction patterns and collaborative activity participation and contribution
+quality.
 
-In regards to the dashboards, he made improvements on the students view
+In regards to the dashboards, he made improvements on the student view
 providing actionable insights while focusing on information clarity through
 visualization components such as:
 \begin{itemize}
       \item Line charts tracking temporal patterns of engagement (platform access and forum
             activity over weeks).
       \item Bar charts for comparing quiz grades across multiple assessments.
-      \item Radar charts for multi dimensional performance profiling.
+      \item Radar charts for multidimensional performance profiling.
       \item Progress indicators as a visual representation of quest completion and level
             advancement.
       \item Tables with detailed statistical breakdowns of quiz performance and attempt
@@ -653,7 +656,7 @@ visualization components such as:
       \label{fig:student-dashboard}
 \end{figure}
 
-On the faculty view, he designed the dashboards according to Business
+In the faculty view, he designed the dashboards according to Business
 Intelligence best practices for analytical decision support with the following
 key metrics being displayed:
 \begin{itemize}
@@ -690,7 +693,7 @@ future development and iteration:
             \end{itemize}
       \item Functional Limitations
             \begin{itemize}
-                  \item Difficuty Assessment: Lacking mechanisms to capture student-perceived
+                  \item Difficulty Assessment: Lacking mechanisms to capture student-perceived
                         difficulty of content topics
                   \item Adaptive Learning: Limited capability to personalize learning paths based on
                         individual student characteristics
@@ -729,23 +732,23 @@ learning difficulties and a shift from the monolithical three tier architecture
 into a cloud-native, microservices design that enabled scalability and
 multi-institutional deployment.
 
-In this version, the sylabus contents could be stored in the GraphDB database
+In this version, the syllabus contents could be stored in the GraphDB database
 and displayed to the students as a better way to visualize the course's
-contents as shown in figure~\ref{fig:sylabus-uc}.
+contents as shown in figure~\ref{fig:syllabus-uc}.
 
 \begin{figure}[H]
       \centering
       \includegraphics[width=0.8\textwidth]{images/sylabus-uc-v2.png}
-      \caption{Sylabus Contents of an UC. Source: Lopes M.~\cite{lopes_ontologies_2021}.}
-      \label{fig:sylabus-uc}
+      \caption{Syllabus Contents of an UC. Source: Lopes M.~\cite{lopes_ontologies_2021}.}
+      \label{fig:syllabus-uc}
 \end{figure}
 
 The learning difficulties of students could be gathered through a questionnaire
-after every quest (see figure~\ref{fig:quest-validation}), presented to
+after every quest (see Figure~\ref{fig:quest-validation}), presented to
 students as a quest validation that would give the quests XP upon completion.
-This would provide the faculty a better view of the students challenges and
-feedback on the lessons, as well as what needed to be revised as demonstrated
-in the figure~\ref{fig:sylabus-uc-with-validation}.
+This would provide the faculty with a better view of the students' challenges
+and feedback on the lessons, as well as what aspects needed to be revised as
+demonstrated in Figure~\ref{fig:syllabus-uc-with-validation}.
 \begin{figure}[H]
       \centering
       \includegraphics[width=0.8\textwidth]{images/difficulty-tab-v2.png}
@@ -757,7 +760,7 @@ in the figure~\ref{fig:sylabus-uc-with-validation}.
       \centering
       \includegraphics[width=0.8\textwidth]{images/sylabus-uc-with-difficulty-v2.png}
       \caption{Syllabus contents with difficulty perceived by students. Source: Lopes M.~\cite{lopes_ontologies_2021}.}
-      \label{fig:sylabus-uc-with-validation}
+      \label{fig:syllabus-uc-with-validation}
 \end{figure}
 
 Further technical investigation will come when analyzing the current state of
@@ -765,7 +768,7 @@ the application in chapter 4 of this dissertation.
 
 \subsection{Lessons Learned from Prior Iterations}
 
-The evolutionary development of the Learning Scorecard has yielded important
+\noindent~The evolutionary development of the Learning Scorecard has yielded important
 insights into the challenges and opportunities associated with educational
 technology implementation in higher education contexts. These lessons have
 directly informed the design decisions underlying Learning Scorecard 3.0 and
@@ -773,13 +776,13 @@ provide valuable guidance for future LS development efforts.
 
 Previous iterations consistently revealed the critical importance of seamless
 integration with existing institutional systems and workflows. Standalone
-implementations, while providing flexibility and autonomy, created barries to
+implementations, while providing flexibility and autonomy, created barriers to
 adoption through the requirement for separate authentication, manual data entry
 and navigation between multiple platforms. These experiences highlighted the
 need for deeper integration with institutional learning management systems to
 achieve sustainable adoption and effectiveness.
 
-Analysis of user behavior accross previous versions revealed important patterns
+Analysis of user behavior across previous versions revealed important patterns
 regarding the factors that drive sustained engagement with educational
 technology platforms. Students demonstrated higher levels of engagement when
 gamification elements were seamlessly integrated with existing academic
@@ -796,20 +799,19 @@ and support systems rather than maintaining separate technological stacks that
 require independent updates, security monitoring and user support.
 \section{Learning Scorecard Conceptual Framework}
 
-The Learning Scorecard (LS) conceptual framework encompasses a comprehensive
+\noindent~The Learning Scorecard (LS) conceptual framework encompasses a comprehensive
 set of interconnected concepts designed to support gamified learning
 experiences in higher education. This framework is organized around four
 primary domains that reflect different aspects of the educational experience:
-Academic Structure and Organization, Gamification Mechanics, Social Learning.
-These concepts can be organized into four primary domains: Academic Structure,
-Gamification Mechanics, Social Learning and Recognition and Achievement
-Systems. Each domain contains interconnected concepts that work together to
-create a comprehensive educational technology ecosystem that supports both
-individual learning, cooperation and institutional objectives.
+Academic Structure and Organization, Gamification Mechanics, Social Learning
+and Recognition and Achievement System. Each domain contains interconnected
+concepts that work together to create a comprehensive educational technology
+ecosystem that supports both individual learning, cooperation and institutional
+objectives.
 
 \subsection{Academic Structure and Organization}
 
-The academic foundation of the Learning Scorecard is built upon traditional
+\noindent~The academic foundation of the Learning Scorecard is built upon traditional
 higher education organizational structures, adapted to support digital learning
 environments.
 
@@ -821,11 +823,11 @@ environments.
 
 \subsection{Gamification Mechanics}
 
-The core gamification elements provide the foundation for student engagement
+\noindent~The core gamification elements provide the foundation for student engagement
 and progress tracking through game-like mechanics adapted to educational
 contexts.
 
-\textbf{Experience Points and Ranks.} \textit{Experience Points} (XP) serve as the fundamental currency of progress within the platform, earned through completion of various educational activities. The \textit{Rank} system establishes hierarchical progression levels based on accumulated XP, including ranks such as Newbie (entry level at 0 XP), Rookie, Skilled Expert, Master and Legendary. Faculty members can configure rank thresholds dynamically, with each rank unlocking new privileges and recognition within the platform.
+\textbf{Experience Points and Ranks.} \textit{Experience Points} (XP) serve as the fundamental currency of progress within the platform, earned through completion of various educational activities. The \textit{Rank} system establishes hierarchical progression levels based on accumulated XP, including ranks such as Newbie (entry level at 0 XP), Rookie, Skilled, Expert, Master and Legendary. Faculty members can configure rank thresholds dynamically, with each rank unlocking new privileges and recognition within the platform.
 
 \textbf{Quests.} \textit{Quests} represent the core educational activities that students complete to earn XP and demonstrate learning. The system categorizes quests into five distinct types: Class Attendance, Practical Assignment, Quiz, Exercise and Event. Each quest can be designated as mandatory (milestone quests) or optional, providing flexibility in curriculum design while maintaining educational objectives.
 
@@ -833,7 +835,7 @@ contexts.
 
 \subsection{Social Learning}
 
-The social components of the Learning Scorecard foster collaboration and
+\noindent~The social components of the Learning Scorecard foster collaboration and
 healthy competition among students through structured group dynamics.
 
 \textbf{Alliances.} \textit{Alliances} function as large-scale organizational units that typically correspond to academic classes or programs (e.g., LEI or ETI). These structures facilitate competition and comparison at the class level while maintaining educational coherence, enabling students to compare their progress through dedicated leaderboards and participate in alliance-specific activities.
@@ -842,7 +844,7 @@ healthy competition among students through structured group dynamics.
 
 \subsection{Recognition and Achievement System}
 
-The recognition framework provides multiple pathways for acknowledging student
+\noindent~The recognition framework provides multiple pathways for acknowledging student
 accomplishments and maintaining motivation through visible achievements.
 
 \textbf{Badges.} The \textit{Badge} system provides targeted recognition for specific accomplishments and behaviors, featuring 39 different badges organized into four categories: individual achievements, guild-based accomplishments, forum participation and final questionnaire completion. Each category includes multiple tiers (bronze, silver, gold and platinum) corresponding to increasing levels of difficulty and commitment.
@@ -855,16 +857,16 @@ accomplishments and maintaining motivation through visible achievements.
 
 \chapter{System Architecture and Design}
 \section{Requirements}
-\noindent An imperative aspect in any application conceptualization is a thorough requirement analysis. These requirements can be functional (FR) or non functional (NFR) and shape the architectural decisions that are made during its development as well as assessing whether a system will succeed.
+\noindent An imperative aspect in any application conceptualization is a thorough requirement analysis. These requirements can be functional (FR) or non-functional (NFR) and shape the architectural decisions that are made during its development as well as assessing whether a system will succeed.
 
 \textbf{Functional Requirements (FR)}
 
-It's important to define what an engineer should strive for when determining
+It is important to define what an engineer should strive for when determining
 functional requirements as it will ultimately be what defines an application,
-molds its functionality and consequently decides it's architecture. Functional
+molds its functionality and consequently decides its architecture. Functional
 requirements are the essential characteristics that the system should deliver
 that the end-user specifically demands.~\cite{saroja_functional_2023} A simpler
-way to perceive it is that they define what the system should perform. It's
+way to perceive it is that they define what the system should perform. It is
 important with any version increment of the LS to maintain fidelity to the
 previous requirements and adjust them when appropriate.
 Costa~\cite{costa_thesis_2017} identified base functional requirements which I
@@ -879,11 +881,11 @@ myself.
             distinguishing between student and teacher user types with corresponding
             permissions and interfaces.
       \item[FR4] The LS platform must have a dashboard for individual student performance
-            monitorization (students view)
-      \item[FR5] The LS platform must have a dashboard for class performance monitorization
+            monitoring (students view)
+      \item[FR5] The LS platform must have a dashboard for class performance monitoring
             (teacher view)
       \item[FR6] The LS platform must have a course chronogram with deadlines and study
-            guidelines, personalized by the teacher/faculty
+            guidelines, customizable by the teacher/faculty
       \item[FR7] The LS platform must include gamification elements (score, ranks, quests,
             leaderboards)
 \end{enumerate}
@@ -896,8 +898,8 @@ counterpart must define how the system should perform, rather than what. While
 not directly visible as features they are vital in shaping the user experience
 and ensuring the system's long-term success. A few examples of these
 requirements could be performance, security, reliability, etc.
-Costa~\cite{costa_thesis_2017} also layed out base non-functional requirements
-which I will also evaluate, adapt and integrate into my system architecture, in
+Costa~\cite{costa_thesis_2017} laid out base non-functional requirements which
+I will also evaluate, adapt and integrate into my system architecture, in
 addition to some identified by myself. From Costa's non-functional
 requirements:
 \begin{enumerate}
@@ -905,14 +907,14 @@ requirements:
       \item[NFR2] Intuitive and user-friendly interface (least possible manual input by
             students)
       \item[NFR3] The user identification data must be private (ethical requirement), the
-            teacher/faculty must only have access to the class agregated data, even for at
+            teacher/faculty must only have access to the class aggregated data, even for at
             risk students.
 \end{enumerate}
-This last non-functional requirement, as Costa~\cite{costa_thesis_2017} correctly identified is a missed opportunity as the faculty will have no way of knowing which student is at risk and ultimately take advantage of such introspective metrics on student performance. As the system is integrated into moodles learning environment and all this information is already available to the faculty I believe this NFR should be altered into a more transparent requirement and only require anonymization of students the data if the Learning Scorecard extended its functionality to allow for a predictive model to be set in place to predict the outcome of the students grade based on current effort. Therefore, the corrected NFR3 is:
+This last non-functional requirement, as Costa~\cite{costa_thesis_2017} correctly identified is a missed opportunity as the faculty will have no way of knowing which student is at risk and ultimately take advantage of such introspective metrics on student performance. As the system is integrated into Moodle's learning environment and all this information is already available to the faculty I believe this NFR should be altered into a more transparent requirement and only require anonymization of the student data if the Learning Scorecard were to extend its functionality to allow for a predictive model to be set in place to predict the outcome of the students grade based on current effort. Therefore, the corrected NFR3 is:
 \begin{itemize}
       \item[NFR3] The user identification data must be private (ethical requirement) in
-            case it's used in colaboration with a predictive model for the grades. The
-            teacher must only have access to the class agregated data.
+            case it is used in collaboration with a predictive model for the grades. The
+            teacher must only have access to the class aggregated data.
 \end{itemize}
 
 Throughout the study and conceptualization of the system a few more
@@ -925,15 +927,15 @@ non-functional requirements were identified:
 \end{enumerate}
 \section{Overview of LS Architecture}
 \subsection{Evolution from Standalone Architecture}
-\noindent The LS architecture has withstood many iterations throughout the years and has become more complex and polished through them, as new features have been added, alternatives and changes in architecture have been thought as most adequate. Let's suppose we take the latest version as a baseline and dive into what can be improved.
+\noindent The LS architecture has withstood many iterations throughout the years and has become more complex and polished through them, as new features have been added, alternatives and changes in architecture have been deemed most adequate. Suppose we take the latest version as a baseline and dive into what can be improved.
 
 In the latest version of the Learning Scorecard, version 2.0, as documented by
 Miguel Lopes~\cite{lopes_ontologies_2021} the technological stack consisted of
 React~\cite{react_dev} frontend components communicating with
-Express~\cite{express_js} (NodeJS~\cite{nodejs_org}) backend services, which in
-turn interfaced through REST with a cloud-hosted NoSQL MongoDB
-database~\cite{mongodb_database} and GraphDB~\cite{graphdb_ontotext} system
-deployed in Azure infrastructure~\cite{azure_microsoft} primarily hosted in
+Express~\cite{express_js} (Node.js~\cite{nodejs_org}) backend services, which
+in turn interfaced through via REST with a cloud-hosted NoSQL
+MongoDB~\cite{mongodb_database} and GraphDB~\cite{graphdb_ontotext} system
+deployed on Azure infrastructure~\cite{azure_microsoft} and primarily hosted in
 Heroku~\cite{heroku_platform}.
 \begin{figure}[H]
       \centering
@@ -942,20 +944,20 @@ Heroku~\cite{heroku_platform}.
       \label{fig:ls2_arch}
 \end{figure}
 
-While this architecture demonstrated scalabilty, modularity and adherence to
+While this architecture demonstrated scalability, modularity and adherence to
 modern web development practices, it presented several critical limitations,
-mainly in the fact that it is not integrated with the ISCTE Moodle environment
-(FR2), relying on manual input by the faculty and students making it not an
-ideal system and one that would become more of a chore for teachers who have
-most commonly multiple classes to teach, register and manage and students who
-also have multiple classes, quizes and exercises to keep track of.
+primarily in that it is not integrated with the ISCTE Moodle environment (FR2),
+relying on manual input by the faculty and students making it not an ideal
+system and one that would become more of a chore for teachers who have most
+commonly multiple classes to teach, register and manage and students who also
+have multiple classes, quizzes and exercises to keep track of.
 
-We must then conjure a system that is integrated with the ISCTE moodle
+We must then conjure a system that is integrated with the ISCTE Moodle
 environment and satisfies all functional and non-functional requirements set
 previously.
 
 At first glance, it is possible to achieve a more integrated system making use
-of the platform developed previously with the use of the moodle native web
+of the platform developed previously with the use of the Moodle native web
 services, although the standalone nature necessitated separate authentication
 systems, creating friction for users who must maintain multiple credentials and
 navigate between distinct platforms. The external infrastructure dependencies
@@ -967,13 +969,13 @@ institutional data governance policies.
 \subsection{Plugin-Based Architecture Benefits}
 \noindent The Learning Scorecard 3.0 plugin-based architecture approach addresses these limitations through direct integration with Moodle's comprehensive infrastructure and Service API ecosystem. This approach provides several critical advantages that enhance both technical capabilities and institutional viability.
 
-\textit{Infrastructure Integration} By operating within Moodle's establish infrastructure, LS 3.0 eliminates external hsting requirements and associated costs while ensuring compliance with institutional security and data governance policies. The platform leverages existing ISCTE server infrastructure, Apache web servers and database systems without requiring additional resources or maintenance overhead.
+\textit{Infrastructure Integration} By operating within Moodle's established infrastructure, LS 3.0 eliminates external hosting requirements and associated costs while ensuring compliance with institutional security and data governance policies. The platform leverages existing ISCTE's server infrastructure, Apache web servers and database systems without requiring additional resources or maintenance overhead.
 
-\textit{Authentication and User Management} Integration with Moodle's authentication system erases the need for separate user credentials and login processes, reducing friction for students and faculty while ensuring consistency with institutional access policies. The platform automatically inherits Moodle's sophisticated role and permission systems, enabling fine-grained access control without additional implemenetation complexity.
+\textit{Authentication and User Management} Integration with Moodle's authentication system erases the need for separate user credentials and login processes, reducing friction for students and faculty while ensuring consistency with institutional access policies. The platform automatically inherits Moodle's sophisticated role and permission systems, enabling fine-grained access control without additional implementation complexity.
 
-\textit{Data Ecosystem Access} Perhaps most critically, the plugin arhitecture provides direct access to Moodle's comprehensive student activity and performance data, enabling automated data collection and real-time analytics without manual input requirements. This access includes quiz results, assignment submissions, forum participation, resource access patterns and completion tracking data that can be seamlessly integrated into gamification and analytics workflows.
+\textit{Data Ecosystem Access} Perhaps most critically, the plugin architecture provides direct access to Moodle's comprehensive student activity and performance data, enabling automated data collection and real-time analytics without manual input requirements. This access includes quiz results, assignment submissions, forum participation, resource access patterns and completion tracking data that can be seamlessly integrated into gamification and analytics workflows.
 
-\textit{User Experience Consistency} The plugin approach ensures visual and functional consistency with existing institutional interfaces, reducing learning curves for users and promoting adoption through familiar interaction patterns. Students and faculty can access Learning Scorecard fuctionality without leaving their established academic workflows.
+\textit{User Experience Consistency} The plugin approach ensures visual and functional consistency with existing institutional interfaces, reducing learning curves for users and promoting adoption through familiar interaction patterns. Students and faculty can access Learning Scorecard functionality without leaving their established academic workflows.
 \subsection{Concept Mapping \& Integration Analysis}
 
 \noindent~The successful integration of Learning Scorecard functionality within Moodle's
@@ -1019,11 +1021,11 @@ semantic meaning aligns perfectly. That's the case for the concepts:
 \begin{itemize}
       \item Course: Moodle natively supports course categorizations that represent
             university courses such as ''Computer Science''.
-      \item Curricular Unit: Perfect mapping, each LS curricular unit corresponds direcly
+      \item Curricular Unit: Perfect mapping, each LS curricular unit corresponds directly
             to a Moodle course.
       \item Student/Teacher: Moodle's role-based access control system directly supports
             student and teacher roles. Permissions and course access are natively managed.
-      \item Sylabus Contents: Moodle's course module system supports 16 content types
+      \item Syllabus Contents: Moodle's course module system supports 16 content types
             (files, URLs, pages, quizzes, etc.). Tags provide semantic classification that
             LS requires.
       \item Quests: Direct conceptual mapping of LS quests and Moodle activities. All
@@ -1046,7 +1048,7 @@ evident in the following concepts:
       \item Calendar: While Moodle has a native calendar, extra quest metadata (XP values,
             difficulty, etc.) is not native and thus requires additional implementation.
       \item Timeline: Moodle tracks activity completion but doesn't provide LS's
-            chronological timeline view, it requries pulling data from multiple tables and
+            chronological timeline view, it requires pulling data from multiple tables and
             creating a custom visualization.
       \item Experience Points: Moodle's gradebook can store percentage/point-based values
             but isn't designed for XP systems. Further development is needed, such as
@@ -1055,7 +1057,7 @@ evident in the following concepts:
       \item Ranks: Moodle has no concept of progression ranks. It is required to create
             entirely new data structures, rank-up notifications and visualization of rank
             and rank progress.
-      \item Trophies: While badges provide the base, trohpies have specific implementation
+      \item Trophies: While badges provide the base, trophies have specific implementation
             efforts required, such as leaderboard-based logic and visualization.
       \item Avatars: Moodle allows profile pictures but not customizable avatar systems.
             Further development in avatar selection/customization interfaces and storage as
@@ -1069,43 +1071,45 @@ evident in the following concepts:
 \end{itemize}
 
 \section{Development Environment and Technical Infrastructure}
-\noindent The establishment of a robust, consistent and production-like development environment proved critical for the successful implementation of LS 3.0. The complexity of Moodle plugin development, combined with the need for the system to mimick the production environment as much as possible, required careful consideration of development infrastructure and tooling decisions.
+\noindent The establishment of a robust, consistent and production-like development environment proved critical for the successful implementation of LS 3.0. The complexity of Moodle plugin development, combined with the need for the system to mimic the production environment as much as possible, required careful consideration of development infrastructure and tooling decisions.
 
-\subsection{Development Environment Evolution}
-\noindent The development environment configuration process revealed important insights into the requirements and challenges of Moodle plugin development, ultimately leading to the identification of optimal approaches for maintaining development productivity and most importantly, system reliability.
+The development environment configuration process revealed important insights
+into the requirements and challenges of Moodle plugin development, ultimately
+leading to the identification of optimal approaches for maintaining development
+productivity and most importantly, system reliability.
 
 The initial development approach employed XAMPP~\cite{apache_friends_xampp} to
-provide a local PHP environment, apache server and Mysql database
-infrastructure, imperative for standalone Moodle instance execution. However,
-this approach demonstrated significant limitation that compromised development
-reliability and consistency. File persistence issues following server restarts
-and unpredicatable system behavior created an unstable foundation that was
-incompatible with the production-like development environment required for
-plugin implementation.
+provide a local PHP environment, Apache server and MySQL
+database~\cite{mysql_database} infrastructure, imperative for standalone Moodle
+instance execution. However, this approach demonstrated significant limitations
+that compromised development reliability and consistency. File persistence
+issues following server restarts and unpredictable system behavior created an
+unstable foundation that was incompatible with the production-like development
+environment required for plugin implementation.
 
 The second development approach investigated Docker
 containerization~\cite{docker_containers} with orchestrated Bitnami Moodle
 image~\cite{bitnami_cloud} to achieve improved consistency and reproducibility.
 While this approach initially showed promise through improved container
-persistence and more predictable behavier, plugin integration revealed critical
-limitations. The Bitnami image implemented included automated Moodle
-configuration processes that incorrectly identified plugin additions as
-corrupted system files, triggering unwanted fresh installations that
-compromised the continuity of the plugin's development and was therefore
-excluded from consideration for the final Moodle development environment.
+persistence and more predictable behavior, plugin integration revealed critical
+limitations. The Bitnami image implemented automated Moodle configuration
+processes that incorrectly identified plugin additions as corrupted system
+files, triggering unwanted fresh installations that compromised the continuity
+of the plugin's development and was therefore excluded from consideration for
+the final Moodle development environment.
 
 The final development environment employed custom docker container
 orchestration with separate Apache server and MariaDB
 database~\cite{mariadb_database} images, enabling manual Moodle configuration
 that avoided the automated configuration issues encountered with pre-built
-images (like Bitnami's). Although with the increased effort of configuring the
-apache server and installing the same Moodle version as the production ISCTE
-2024/2025 Moodle instance (version 4.4.1) and all the necessary dependencies
-this approach provided the stability, consistency and production-like behavior
-expected and required for reliable plugin development.
+images (like Bitnami's). Although this came with the increased effort of
+configuring the Apache server and installing the same Moodle version as the
+production ISCTE 2024/2025 Moodle instance (version 4.4.1) and all the
+necessary dependencies this approach provided the stability, consistency and
+production-like behavior expected and required for reliable plugin development.
 
 \section{Plugin Integration with Moodle}
-\noindent There are multiple types of moodle plugins and depending on their purpose we should select the most adequate. According to the specification of the Learning Scorecard we would need to evaluate what plugin type is better suited.
+\noindent There are multiple types of Moodle plugins and depending on their purpose we should select the most adequate. According to the specification of the Learning Scorecard we would need to evaluate what plugin type is better suited.
 
 Moodle's comprehensive plugin architecture~\cite{moodle_plugin_api} provides
 multiple plugin types, each optimized for specific functionality categories and
@@ -1114,15 +1118,15 @@ necessitated evaluation of plugin types to ensure appropriate functionality
 distribution and optimal integration with Moodle's existing systems.
 
 Block plugins emerged as the optimal choice for user-facing dashboard and
-metric displays. The block architecure's deisgn for small, configurable
+metric displays. The block architecure's design for small, configurable
 information displays that can be positioned throughout Moodle's interface
 aligns perfectly with Learning Scorecard's requirement for accessible
-gamification metrics within existing workflows. block plugins enable experience
+gamification metrics within existing workflows. Block plugins enable experience
 point displays, ranking information and progress metrics to be seamlessly
 integrated into student and faculty dashboards without requiring navigation to
 separate interfaces.
 
-Local plugins generic specification provide the appropriate architecture for
+Local plugins' generic specification provide the appropriate architecture for
 additional LS functionality, including leaderboards, Learning Scorecard
 configuration, database table creation, etc.
 
@@ -1164,22 +1168,22 @@ This adapted approach enabled rapid iteration and continuous validation while
 maintaining academic rigor throughout the development process.
 
 \section{Database Design and Data Integration}
-\noindent When designing the database for this dissertation's proof of concept it was imperative to adhere to the objectives previously defined, integrate with Moodle's infrastructure and guarantee the security and integrity of the student data.
+\noindent When designing the database for this dissertation's proof-of-concept it was imperative to adhere to the objectives previously defined, integrate with Moodle's infrastructure and guarantee the security and integrity of the student data.
 
 The Learning Scorecard 3.0 employs a hybrid database architecture that combines
 Moodle's native database with custom LS-specific tables that support the
 gamification features. To ensure seamless integration with Moodle and
-maintaining data integrity and security, LS 3 employs Moodle's standardized
+maintaining data integrity and security, LS 3.0 employs Moodle's standardized
 schema definition approach for adding custom tables to the Moodle database.
 
-Following Moodle's plugin development best practices, LS 3 defines it's custom
+Following Moodle's plugin development best practices, LS 3.0 defines its custom
 database schema using the XML Database Definition Language. The file
 \textit{db/install.xml} specifies the structure of gamification related tables
 that are automatically created during plugin installation. This solution
 provides several advantages:
 \begin{itemize}
       \item Version Control: Schema changes are tracked and can be upgraded systematically
-            through moodle upgrade mechanism.
+            through Moodle upgrade mechanism.
       \item Database Portability: The XML definition ensures compatibility across different
             database management systems (MySQL, MariaDB, PostgreSQL, etc.).
       \item Automatic Installation: Tables are created during the LS plugin's installation,
@@ -1189,13 +1193,13 @@ provides several advantages:
             API.
 \end{itemize}
 
-By leveraging Moodle's database access LS 3 is able to extract and perform
+By leveraging Moodle's database access LS 3.0 is able to extract and perform
 event-driven processing of activity data using the observer pattern, it is also
-able to make direct database queries to native tables, real-time calculation of
-XP when events are triggered and data validation of grades to ensure only valid
-and released grades are displayed and able to provide XP.
+able to make direct database queries to native tables, the real-time
+calculation of XP when events are triggered and the data validation of grades
+to ensure only valid and released grades are displayed and able to provide XP.
 
-LS 3, in this first iteration, provides five extra tables:
+LS 3.0, in this first iteration, provides five extra tables:
 \begin{enumerate}
       \item[1.] \textit{local\_ls\_ranks}: Table for storing the rank name, color and thresholds per course
       \item[2.] \textit{local\_ls\_student\_xp}: Table for storing calculated XP totals and rank per student/course
@@ -1207,28 +1211,28 @@ LS 3, in this first iteration, provides five extra tables:
 \begin{figure}[H]
       \centering
       \includegraphics[width=0.8\textwidth]{images/db-er.png}
-      \caption{Entity Relations diagram (course is a moodle table shortened for context)}
+      \caption{Entity Relations diagram (course is a Moodle table shortened for context)}
       \label{fig:db-er-ls}
 \end{figure}
 
 \section{Core Features}
-\noindent Learning Scorecard 3.0 serves as a proof of feasibility of the system's architecture and thus this iteration will provide the basis of the previous functionality while being extensible to future iterations. At the current state of this dissertation the LS has the folowing core features.
+\noindent Learning Scorecard 3.0 serves as a proof of feasibility of the system's architecture and thus this iteration will provide the basis of the previous functionality while being extensible to future iterations. At the current state of this dissertation, the LS has the following core features.
 
 \subsection{Leaderboards}
 
 This iteration of the Learning Scorecard provides five distinct leaderboards:
 Overall, Quiz Masters, Exercise Lords, Guild Legends and Combined Champion.
-Each present different metrics and calculate the rankings differently.
+Each presents different metrics and calculates the rankings differently.
 
-Overall Leaderboard is the aggregation of all quest XP and calculates the
-ranking based on overall course performance.
+Overall Leaderboard (Figure~\ref{fig:overall-leaderboard}) is the aggregation
+of all quest XP and calculates the ranking based on overall course performance.
 \begin{figure}[H]
       \centering
       \includegraphics[width=0.8\textwidth]{images/overall-leaderboard.png}
       \caption{Overall Leaderboard Interface}
       \label{fig:overall-leaderboard}
 \end{figure}
-Quiz Masters focuses on the quiz quest XP and the rankings are calculated based
+Quiz Masters (Figure~\ref{fig:quiz-leaderboard}) focuses on the quiz quest XP and the rankings are calculated based
 on it and bonus XP, experience points that are the multiplication of the grade
 by the score multiplier defined in the courses LS settings.
 \begin{figure}[H]
@@ -1237,7 +1241,7 @@ by the score multiplier defined in the courses LS settings.
       \caption{\textit{Quiz Masters} Leaderboard Interface}
       \label{fig:quiz-leaderboard}
 \end{figure}
-Exercise Lords follows the same formula, exercise quest XP plus the product of
+Exercise Lords (Figure~\ref{fig:exercise-leaderboard}) follows the same formula, exercise quest XP plus the product of
 the grade by the score multiplier.
 \begin{figure}[H]
       \centering
@@ -1245,7 +1249,7 @@ the grade by the score multiplier.
       \caption{\textit{Exercise Lords} Leaderboard Interface}
       \label{fig:exercise-leaderboard}
 \end{figure}
-Guild Legends is a leaderboard for the guilds, all members of the guilds
+Guild Legends (Figure~\ref{fig:guild-leaderboard}) is a leaderboard for the guilds, all members of the guilds
 contribute equally for the guild's ranking in this leaderboard. It is achieved through the Moodle's native groups that the teacher or faculty can create.
 \begin{figure}[H]
       \centering
@@ -1253,7 +1257,7 @@ contribute equally for the guild's ranking in this leaderboard. It is achieved t
       \caption{\textit{Guild Legends} Leaderboard Interface}
       \label{fig:guild-leaderboard}
 \end{figure}
-Combined Champion's rankings are calculated by the accumulation of all other
+Combined Champion's (Figure~\ref{fig:combined-leaderboard}) rankings are calculated by the accumulation of all other
 guild's (except for the Guild Legends) leaderboard positions. The student with
 the highest rankings on average will be ranked first in it.
 \begin{figure}[H]
@@ -1264,13 +1268,13 @@ the highest rankings on average will be ranked first in it.
 \end{figure}
 
 These leaderboards have dynamic ranking, meaning that the positions are
-calculated in real-time, providing the most accurate and actual results for the
-students. Displayed, there is the position in the leaderboard, the student's
-name and the student's rank, except for the guild leaderboard where a guild
-name is preferred.
+calculated in real-time, providing the most accurate and up-to-date results for
+the students. Displayed are the position in the leaderboard, the student's name
+and the student's rank, except for the guild leaderboard where a guild name is
+displayed instead.
 
-The user interfaces are built using Moodle's native tab navigation for seamless
-integration and styling consistency, maintaining the classic Moodle look
+The user interface is built using Moodle's native tab navigation for seamless
+integration and styling consistency, maintaining the classic Moodle appearance
 without appearing out of place in the course page.
 
 \subsection{Learning Scorecard Settings}
@@ -1280,20 +1284,20 @@ teachers and faculty to customize the gamification parameters of the course.
 This configuration system allows fine-grained control over how students earn
 experience points, ranks and of the LS interfaces.
 
-The settings page is only accessible to user with course management
+The settings page is only accessible to users with course management
 capabilities, ensuring that only teachers and faculty can modify the LS
 parameters. The page integrates with Moodle's security framework through
 session key validation and capability checks. The settings are also
-contextually aware and only apply to the course they is accessed in.
+contextually aware and only apply to the course it is accessed in.
 
-Present in this page are a total of three major sections that can be modified:
+Present on this page are a total of three major sections that can be modified:
 (1) The experience points (XP) settings are where the base XP for different
 activities and the grade multiplier can be modified; (2) The student rank
 configuration defines the rank names, color, thresholds and where the teacher
 can also create or remove ranks. (3) The Leaderboard display settings that
-customizes how the leaderboards are displayed to the students, has properties
-to toggle the visibility of the different leaderboards, insert pagination,
-display the rank colours and an anonymous mode that hides the student names.
+customize how the leaderboards are displayed to the students, has properties to
+toggle the visibility of the different leaderboards, enable pagination, display
+the rank colours and an anonymous mode that hides the student names.
 
 \begin{figure}[H]
       \centering
@@ -1325,20 +1329,20 @@ there as a placeholder for future work and improvements.
 
 \subsection{Experience Points (XP) and Ranking System}
 
-Present in this iteration is also a XP System that provides real-time XP
+Also present in this iteration is an XP System that provides real-time XP
 calculation through event observers that trigger upon quiz completion and
-activity submission. Grade based XP multipliers and perfect score bonuses are
+activity submission. Grade-based XP multipliers and perfect score bonuses are
 also applied to every quest completed by the students.
 
 The LS 3.0 provides an XP configuration system that allows per-course settings
-with customizable base XP values for different activity types, configurable
+with customizable base XP values for different activity types, a configurable
 grade bonus and an audit trail through an XP history table that logs every XP
-transaction. All XP settings are stored in the moodle database natively with
+transaction. All XP settings are stored in the Moodle database natively with
 fallback default values and automatic creation upon course initialization.
 
-All XP accumulated by each student maps into a 6 tier ranking system that
-follows the definition found on previous versions: Newbie - Rookie - Skilled -
-Expert - Master - Legendary. These rank intervals are all available to be
+All XP accumulated by each student maps into a 6-tier ranking system that
+follows the definitions found on previous versions: Newbie, Rookie, Skilled,
+Expert, Master and Legendary. These rank intervals are all available to be
 defined per course in the LS settings page. There are rank badges displaying
 both on the dashboard block of each student and on the leaderboards next to
 their name. On the dashboard there is also a percentage-based progress bar with
@@ -1346,22 +1350,21 @@ their name. On the dashboard there is also a percentage-based progress bar with
 
 With the notification system native to Moodle, the LS 3.0 can send a
 notification on rankup, in order to provide an extra boost of motivation as it
-was designed for in previous iterations of moodle.
+was designed for in previous iterations of Moodle.
 
 \subsection{Dashboard Block Plugin}
 
-The dashboard block plugin was created as a proof of concept of the learning
-scorecard previous version's dashboards with graphs and learning metrics. It
-was a achieved through a auxiliary plugin created within the moodle
-architecture that is only responsible for the UI blocks that the students can
-insert into the dashboard. There can be a lot of different blocks each with
-their defined metrics and graphs for a rich visualization interface of the
-students' learning performance.
+The dashboard block plugin was created as a proof-of-concept of the previous
+version's dashboards with graphs and learning metrics. It was achieved through
+an auxiliary plugin created within the Moodle architecture that is responsible
+only for the UI blocks that the students can insert into the dashboard. There
+can be many different blocks each with its defined metrics and graphs providing
+a rich visualization interface of the students' learning performance.
 
-The current and only block present in this plugin is a visualization of the
+The only block currently present in this plugin is a visualization of the
 student's rank (see Figure \ref{fig:block-plugin}), progress to the next rank
 with a percentage-based progress bar and a breakdown of all XP earned. There is
-also an ability to cycle through multiple courses and display the XP for the
+also the ability to cycle through multiple courses and display the XP for the
 course selected.
 
 \begin{figure}[H]
@@ -1371,7 +1374,7 @@ course selected.
       \label{fig:block-plugin}
 \end{figure}
 
-All data presented in the block is retrieved through queries to the moodle
+All data presented in the block is retrieved through queries to the Moodle
 database and the tables that were appended through the Learning Scorecard Local
 plugin. This allows for a better division of responsibilities of each plugin
 and provides a much better and objective architecture that can be easily
@@ -1380,13 +1383,13 @@ extended in the future.
 Another topic to address is the language of the interfaces and text. Every
 plugin has two language packs, folders in the plugin configuration that provide
 translations of text and strings. Currently, the LS 3.0 is able to be
-translated into portuguese and english and the language packs are chosen
-automatically depending on your moodle's language.
+translated into Portuguese and English and the language packs are chosen
+automatically depending on your Moodle language.
 
 \section{Challenges \& Limitations}
-\noindent Throughout the conception and development of the Learning Scorecard 3.0 there were a few challenges that proved difficult to resolve, requiring trade-offs and becoming contraints in the current implementation.
+\noindent Throughout the conception and development of the Learning Scorecard 3.0 there were a few challenges that proved difficult to resolve, requiring trade-offs and becoming constraints in the current implementation.
 
-One big challenge from the LS 3.0 is the Moodle environment unapproachibility
+One big challenge with the LS 3.0 is the Moodle environment unapproachability
 and inconsistency. The instance hosted by ISCTE changes versions regularly,
 proving to be possibly difficult to maintain and keep the LS 3.0 up to date,
 although the plugin architecture presents compatibility with Moodle 4.1+. In
@@ -1394,7 +1397,7 @@ institutional environments with legacy Moodle installations this may limit
 deployment flexibility or even force them to abandon integration all together.
 
 The current leaderboard position calculation methodology requires loading
-entire student datasets into memory for PHP-based sorting algoriths. This
+entire student datasets into memory for PHP-based sorting algorithms. This
 approach presents some scalability concerns, particularly evident in the
 combined leaderboard where multiple leaderboard arrays are maintained
 simultaneously. The current implementation could benefit with optimizations in
@@ -1403,46 +1406,46 @@ exhaustion in courses with extensive enrollments. Not only that, the
 leaderboard generation system relies heavely on multiple sequential SQL queries
 and could be a potential performance bottleneck in high load intensity.
 
-The XP audit trail could accumulate a substantial data volumes over time
-without implemented achival strategies. This design decision prioritizes
-complete historical data but presents long-term storage scaling challenges and
-query performance degradation as data accumulates.
+The XP audit trail could accumulate a substantial data volume over time without
+implemented archival strategies. This design decision prioritizes complete
+historical data but presents long-term storage scaling challenges and query
+performance degradation as data accumulates.
 
 The current database schema maintains a strict per course data separation,
 preventing cross-course analytics. While this architectural decision maintains
 data privacy, it restricts the potential for comprehensive learning analytics
 across multiple courses for both the teacher and the students.
 
-It is imperative, when attempting to mature this proof of concept, to take in
-consideration these limitations and tackle the possible chockeholds of the
+It is imperative, when attempting to mature this proof-of-concept, to take in
+consideration these limitations and tackle the possible chokepoints of the
 application.
 \chapter{Conclusions}
-\noindent~This dissertation has demonstrated success transformation of the Learning Scorecard from a standalone web application to a fully integrated Moodle plugin system. Learning Scorecard 3.0, although just a proof of concept, represents a architectural evolution that addresses the critical adoption barriers identified in previous iterations while perserving core gamification capabilities and providing a stable foundation to build features that weren't ported to this version.
+\noindent~This dissertation has demonstrated successful transformation of the Learning Scorecard from a standalone web application to a fully integrated Moodle plugin system. Learning Scorecard 3.0, although just a proof-of-concept, represents an architectural evolution that addresses the critical adoption barriers identified in previous iterations while preserving core gamification capabilities and providing a stable foundation to build features that weren't ported to this version.
 
-Practically, this dissertation delivers a functional proof of concept that
-eliminates the authentication hurdles, mnual data entry and infrastructure
+Practically, this dissertation delivers a functional proof-of-concept that
+eliminates the authentication hurdles, manual data entry and infrastructure
 maintenance burdens that constrained previous implementations. The plugin-based
-architecture sucessfully leverages Moodle's student activity data, role-based
-access control and established user workflows to create a seamless integration
-and gamified learning experience.
+architecture successfully leverages Moodle's student activity data, role-based
+access control and established user workflows to create a seamless and gamified
+learning experience.
 
 \section{Recommendations for Institutional Use}
-\noindent~Higher educational institutions considering Learning Scorecard 3.0 adoption should take in consideration recommendations prior to a broad institutional use. A controlled pilot deployment within academic contexts focusing on courses with moderate enrollment sizes in order to validate system performance and gather ser feedback is critical and imperative to avoid scalability bottlenecks.
+\noindent~Higher educational institutions considering Learning Scorecard 3.0 adoption should take in consideration recommendations prior to a broad institutional use. A controlled pilot deployment within academic contexts focusing on courses with moderate enrollment sizes in order to validate system performance and gather user feedback is critical and imperative to avoid scalability bottlenecks.
 
-Technical infrastructure should be ensured by institutions in a way that
-alignes with the system requriements of the LS 3.0, including Moodle version
+Technical infrastructure should be ensured by institutions in a way that aligns
+with the system requirements of the LS 3.0, including Moodle version
 compatibility (version 4.1 or higher) and adequate database performance
 capabilities.
 
 In order for a successful institutional adoption its required faculty training
-that enphasize both technical configuration and pedagogical integration
+that emphasize both technical configuration and pedagogical integration
 strategies. Faculty members should receive instruction on Learning Scorecard
 settings management, including experience point configuration, rank threshold
-configuration and leaderboard display options. It's important to address how
+configuration and leaderboard display options. It is important to address how
 gamification elements such as LS 3.0 can be aligned with existing pedagogical
 objectives.
 \section{Future Directions for LS}
-\noindent~This iterations of the Learning Scorecard addresses the main concerns that would block institutional adoption, although it is imperative to continue developing and evolving this concept. Therefore, these are directions that successors in Learning Scorecard development should envision.
+\noindent~This iteration of the Learning Scorecard addresses the main concerns that would block institutional adoption, although it is imperative to continue developing and evolving this concept. Therefore, these are directions that successors in Learning Scorecard development should envision.
 
 It is key to address the scalability limitations identified previously in the
 current implementation, particularly regarding leaderboard calculation and
@@ -1450,27 +1453,27 @@ memory utilization. Implementation of database-level ranking calculation, query
 optimization strategies and intelligent caching mechanisms would enable a wider
 and larger student population without a performance bottleneck.
 
-The XP history table's data accumualtion necessiatetes development of archival
+The XP history table's data accumulation necessitates development of archival
 and data lifecycle management strategies. Future iterations should implement
 automated archival processes or data compression techniques.
 
 Machine learning integration could enable adaptive gamification systems that
 adjust experience point calculations, rank thresholds and later on, badge
 requirements. A predictive modeling able to identify at-risk students based on
-engagement patterns, performance trajectories and comparative analisys could
+engagement patterns, performance trajectories and comparative analysis could
 benefit the faculty's use of the tool and provide a better insight to student
 performance while also providing a more balanced experience for the student.
 
 Future iterations should expand gamification elements beyond the current
 experience point, ranking systems and leaderboards to include features that
 haven't been transformed to this new architecture. The ontology implementation
-could be a valuable asset to the Learning Scorecard and Moodle intitutional
+could be a valuable asset to the Learning Scorecard and Moodle institutional
 experience. There already is a basis for the badge implementation that served
 as a template for further development. The Learning Scorecard was created to be
 as extensible as possible, following a modular architecture.
 
 The foundation established by this research provides a pathway for educational
-technology innovation that leverages, rather than competes with existing
+technology innovation that leverages, rather than competes with, existing
 institutional infrastructures.
 
 \bibliographystyle{IEEEtran}
